@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Muhammad Ali Hussain — Flutter Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E14;
+    --surface:#121826;
+    --surface-2:#1A2233;
+    --border:#232B3D;
+    --text:#E7EAF0;
+    --text-muted:#8993A8;
+    --teal:#2DD4BF;
+    --coral:#FF6B57;
+    --radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;}
+  a{color:inherit;text-decoration:none;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,14,20,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;}
+  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);}
+  .navlinks{display:flex;gap:32px;font-size:13.5px;color:var(--text-muted);}
+  .navlinks a:hover{color:var(--text);}
+  .nav-cta{
+    font-size:13px;font-weight:500;color:var(--bg);background:var(--teal);
+    padding:9px 16px;border-radius:7px;
+  }
+  .mobile-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:110px 0 90px;
+    overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--teal);
+    letter-spacing:0.06em;margin-bottom:20px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:'';width:20px;height:1px;background:var(--teal);}
+  .hero h1{
+    font-size:clamp(34px,5.4vw,58px);
+    font-weight:600;line-height:1.08;max-width:780px;
+  }
+  .hero h1 .hl{color:var(--teal);}
+  .hero p.lead{
+    margin-top:22px;color:var(--text-muted);font-size:16.5px;max-width:560px;
+  }
+  .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--teal);color:#06110E;font-weight:600;font-size:14px;
+    padding:13px 22px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{
+    border:1px solid var(--border);color:var(--text);font-size:14px;font-weight:500;
+    padding:13px 22px;border-radius:8px;transition:border-color .15s ease;
+  }
+  .btn-ghost:hover{border-color:var(--teal);}
+
+  /* Signature: signal waveform */
+  .waveform{
+    position:absolute;left:0;right:0;bottom:-2px;height:120px;z-index:1;opacity:0.9;
+  }
+  .waveform svg{width:100%;height:100%;}
+  .waveform path{
+    fill:none;stroke:var(--teal);stroke-width:1.4;opacity:0.55;
+  }
+  .waveform path.p2{stroke:var(--coral);opacity:0.25;}
+
+  .stat-row{display:flex;gap:48px;margin-top:64px;flex-wrap:wrap;}
+  .stat b{font-family:'Space Grotesk',sans-serif;font-size:30px;display:block;color:var(--text);}
+  .stat span{font-size:12.5px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- Section shell ---------- */
+  section{padding:88px 0;border-bottom:1px solid var(--border);}
+  .section-head{margin-bottom:48px;max-width:600px;}
+  .section-eyebrow{
+    font-family:'JetBrains Mono',monospace;color:var(--teal);font-size:12px;
+    letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;display:block;
+  }
+  .section-head h2{font-size:clamp(24px,3vw,32px);font-weight:600;}
+  .section-head p{color:var(--text-muted);margin-top:10px;font-size:15px;}
+
+  /* ---------- Experience ---------- */
+  .timeline{border-left:1px solid var(--border);padding-left:32px;display:flex;flex-direction:column;gap:44px;}
+  .tl-item{position:relative;}
+  .tl-item::before{
+    content:'';position:absolute;left:-37.5px;top:4px;width:9px;height:9px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--teal);
+  }
+  .tl-item .role-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+  .tl-item h3{font-size:18px;font-weight:600;}
+  .tl-item .period{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);}
+  .tl-item .org{color:var(--teal);font-size:13.5px;margin-top:3px;margin-bottom:12px;}
+  .tl-item ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+  .tl-item li{color:var(--text-muted);font-size:14.5px;padding-left:16px;position:relative;}
+  .tl-item li::before{content:'—';position:absolute;left:0;color:var(--border);}
+
+  /* ---------- Projects ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .proj-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:26px;display:flex;flex-direction:column;transition:border-color .15s ease, transform .15s ease;
+  }
+  .proj-card:hover{border-color:var(--teal);transform:translateY(-3px);}
+  .proj-card.featured{grid-column:span 2;}
+  .proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+  .proj-tag{
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--coral);
+    border:1px solid rgba(255,107,87,0.35);padding:3px 9px;border-radius:20px;
+  }
+  .proj-card h3{font-size:19px;font-weight:600;margin-bottom:6px;}
+  .proj-card .desc{color:var(--text-muted);font-size:14px;margin-bottom:16px;flex-grow:1;}
+  .proj-bullets{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+  .proj-bullets li{font-size:13.5px;color:var(--text-muted);padding-left:14px;position:relative;}
+  .proj-bullets li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;background:var(--teal);border-radius:50%;}
+  .tech-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;}
+  .tech-chip{
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);
+    background:var(--surface-2);padding:4px 9px;border-radius:5px;
+  }
+  .proj-link{font-size:13px;color:var(--teal);font-weight:500;margin-top:auto;}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .skill-block{background:var(--surface);padding:24px;}
+  .skill-block h4{font-size:12.5px;font-family:'JetBrains Mono',monospace;color:var(--teal);margin-bottom:12px;letter-spacing:0.04em;}
+  .skill-block .items{display:flex;flex-wrap:wrap;gap:7px;}
+  .skill-block .items span{font-size:13px;color:var(--text-muted);}
+  .skill-block .items span:not(:last-child)::after{content:'·';margin-left:7px;color:var(--border);}
+
+  /* ---------- Contact ---------- */
+  .contact-wrap{
+    background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:56px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;
+    position:relative;overflow:hidden;
+  }
+  .contact-wrap h2{font-size:clamp(24px,3.4vw,34px);max-width:420px;}
+  .contact-wrap .lead{color:var(--text-muted);margin-top:10px;font-size:15px;max-width:420px;}
+  .contact-list{display:flex;flex-direction:column;gap:14px;}
+  .contact-list a{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--text);}
+  .contact-list a span.k{color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:11.5px;width:70px;flex-shrink:0;}
+  .contact-list a:hover{color:var(--teal);}
+
+  footer{padding:32px 0;text-align:center;color:var(--text-muted);font-size:12.5px;font-family:'JetBrains Mono',monospace;}
+
+  @media(max-width:760px){
+    .navlinks{display:none;}
+    .proj-grid{grid-template-columns:1fr;}
+    .proj-card.featured{grid-column:span 1;}
+    .skills-grid{grid-template-columns:1fr;}
+    .stat-row{gap:32px;}
+    .contact-wrap{flex-direction:column;align-items:flex-start;padding:36px 24px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><span class="dot"></span>S.M. Ali Hussain</div>
+    <div class="navlinks">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="mailto:ali422600@gmail.com">Hire me</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow mono">FLUTTER DEVELOPER · LAHORE, PK · OPEN TO RELOCATION</div>
+    <h1>I build mobile apps<br>that stay <span class="hl">connected</span>,<br>even when the network isn't.</h1>
+    <p class="lead">Flutter developer focused on real-time systems, offline-first architecture, and shipping products that hold up in production — from SIP calling apps to GDPR-compliant social platforms.</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#projects">See my work →</a>
+      <a class="btn-ghost" href="mailto:ali422600@gmail.com">Get in touch</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><b>30+</b><span>APPS SHIPPED</span></div>
+      <div class="stat"><b>5</b><span>LIVE ON PLAY STORE</span></div>
+      <div class="stat"><b>6</b><span>DOMAINS COVERED</span></div>
+    </div>
+  </div>
+  <div class="waveform">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path class="p1" d="M0,60 L60,60 L80,20 L100,100 L120,40 L140,80 L160,60 L220,60 L240,10 L260,110 L280,50 L300,70 L320,60 L1200,60"/>
+      <path class="p2" d="M0,80 L100,80 L120,50 L140,95 L160,65 L180,80 L1200,80"/>
+    </svg>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">Career</span>
+      <h2>Where I've worked</h2>
+      <p>Owning apps end-to-end — architecture, features, and the bugs nobody else wants to touch.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="role-row">
+          <h3>Senior Flutter Developer</h3>
+          <span class="period mono">2022 — Present</span>
+        </div>
+        <div class="org mono">Octet Solutions · Lahore</div>
+        <ul>
+          <li>Own Efone end-to-end — a SIP-based real-time calling and chat app — from architecture to release.</li>
+          <li>Built an offline-first data layer with ObjectBox so calling and messaging keep working without internet.</li>
+          <li>Built a background service that catches incoming SIP calls and messages even when the app is closed.</li>
+          <li>Refactored the codebase around clean architecture and SOLID principles, and mentor junior developers.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="role-row">
+          <h3>Flutter Developer</h3>
+          <span class="period mono">Earlier roles</span>
+        </div>
+        <div class="org mono">Cybermeteors · Techquick</div>
+        <ul>
+          <li>Shipped a HIPAA-compliant healthcare platform handling patient messaging and e-prescriptions.</li>
+          <li>Built a real-time guard-tracking platform with live GPS, geofencing, and incident reporting.</li>
+          <li>Integrated Zego live streaming, RevenueCat subscriptions, and Apple/Google Pay across two entertainment apps.</li>
+          <li>Built a facial-recognition attendance system syncing to Firestore in real time.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">Work</span>
+      <h2>Things I've shipped</h2>
+      <p>Real products, real users — across social, communication, healthcare, and security.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj-card featured">
+        <div class="proj-top">
+          <h3>CIRQL</h3>
+          <span class="proj-tag mono">GDPR · EU CLIENT</span>
+        </div>
+        <p class="desc">A map-based live streaming social app built for a European client, targeting UK university students — developed under full GDPR compliance from day one.</p>
+        <ul class="proj-bullets">
+          <li>Firestore &amp; Storage security rules, TTL data policies, cascading deletes, right-to-erasure</li>
+          <li>Cloud Functions for server-side signup, content moderation, and follower fan-out</li>
+          <li>Custom video trimmer with FFmpeg thumbnail extraction and live cloud recording via Zego</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span><span class="tech-chip">Firebase</span><span class="tech-chip">Cloud Functions</span><span class="tech-chip">Zego</span><span class="tech-chip">FFmpeg</span><span class="tech-chip">Google Maps</span>
+        </div>
+        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.cirql.cirql.ios" target="_blank">Google Play ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <h3>Efone</h3>
+          <span class="proj-tag mono">LIVE</span>
+        </div>
+        <p class="desc">SIP-based real-time calling and chat app with offline-first architecture.</p>
+        <ul class="proj-bullets">
+          <li>Offline-first layer using ObjectBox</li>
+          <li>Background SIP call handling when app is closed</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span><span class="tech-chip">SIP</span><span class="tech-chip">ObjectBox</span><span class="tech-chip">GetX</span>
+        </div>
+        <a class="proj-link" href="https://play.google.com/store/apps/details?id=efone.easytel" target="_blank">Google Play ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <h3>Vardstod</h3>
+          <span class="proj-tag mono">HEALTHCARE</span>
+        </div>
+        <p class="desc">HIPAA-compliant platform connecting patients and providers.</p>
+        <ul class="proj-bullets">
+          <li>Encrypted local storage, secure transmission</li>
+          <li>E-prescription creation and secure messaging</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span><span class="tech-chip">Firebase</span><span class="tech-chip">OAuth 2.0</span>
+        </div>
+        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.vardstod.vardstod" target="_blank">Google Play ↗</a>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <h3>Guard 360 Manager</h3>
+          <span class="proj-tag mono">SECURITY</span>
+        </div>
+        <p class="desc">B2B platform for security companies to track guards in the field.</p>
+        <ul class="proj-bullets">
+          <li>Real-time GPS tracking with geofencing alerts</li>
+          <li>Incident reporting with photo/video evidence</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span><span class="tech-chip">Google Maps SDK</span><span class="tech-chip">Firebase FCM</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-top">
+          <h3>AI Attendance System</h3>
+          <span class="proj-tag mono">LIVE</span>
+        </div>
+        <p class="desc">Facial-recognition attendance — no manual check-in required.</p>
+        <ul class="proj-bullets">
+          <li>On-device face detection with Google ML Kit</li>
+          <li>Real-time sync to Firestore, admin dashboard</li>
+        </ul>
+        <div class="tech-row">
+          <span class="tech-chip">Flutter</span><span class="tech-chip">ML Kit</span><span class="tech-chip">Firestore</span>
+        </div>
+        <a class="proj-link" href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank">Google Play ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">Stack</span>
+      <h2>What I work with</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h4>MOBILE</h4>
+        <div class="items"><span>Flutter</span><span>Dart</span><span>iOS</span><span>Android</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>STATE MANAGEMENT</h4>
+        <div class="items"><span>Bloc/Cubit</span><span>Riverpod</span><span>Provider</span><span>GetX</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>BACKEND</h4>
+        <div class="items"><span>Firebase</span><span>Node.js</span><span>Express</span><span>SQL</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>REAL-TIME</h4>
+        <div class="items"><span>WebSockets</span><span>Socket.IO</span><span>SIP</span><span>Pusher</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>PAYMENTS</h4>
+        <div class="items"><span>Stripe</span><span>Apple Pay</span><span>Google Pay</span><span>RevenueCat</span></div>
+      </div>
+      <div class="skill-block">
+        <h4>CLOUD</h4>
+        <div class="items"><span>AWS S3</span><span>Firebase Storage</span><span>Cloud Functions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="contact-wrap">
+      <div>
+        <h2>Let's build something<br>that ships.</h2>
+        <p class="lead">Open to remote roles and freelance projects — Gulf, Europe, or anywhere the work is good.</p>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:ali422600@gmail.com"><span class="k">EMAIL</span> ali422600@gmail.com</a>
+        <a href="tel:+923431670848"><span class="k">PHONE</span> +92 343 1670848</a>
+        <a href="https://linkedin.com/in/syed-muhammad-ali-hussain-8b261a146" target="_blank"><span class="k">LINKEDIN</span> /syed-muhammad-ali-hussain</a>
+        <a href="#"><span class="k">LOCATION</span> Lahore, Pakistan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Syed Muhammad Ali Hussain — Flutter Developer</footer>
+
+</body>
+</html>
