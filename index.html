@@ -223,11 +223,21 @@
     font-size: 13.5px;
     font-weight: 500;
     text-decoration: none;
-    transition: var(--transition);
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .nav-links a:hover {
     color: var(--text-primary);
+  }
+
+  .nav-links a.active {
+    color: var(--text-primary);
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.2);
   }
 
   .nav-actions {
@@ -1699,10 +1709,60 @@
       e.preventDefault();
       const x = e.pageX;
       scrollAmount = x - startX;
+      // Clamp scrollAmount to valid bounds
+      const minScroll = -(grid.scrollWidth / 2);
+      scrollAmount = Math.max(Math.min(scrollAmount, 0), minScroll);
       grid.style.transform = `translateX(${scrollAmount}px)`;
     });
+    
+    // Touch support
+    wrapper.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - scrollAmount;
+      grid.style.animationPlayState = 'paused';
+    }, {passive: true});
+
+    wrapper.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX;
+      scrollAmount = x - startX;
+      const minScroll = -(grid.scrollWidth / 2);
+      scrollAmount = Math.max(Math.min(scrollAmount, 0), minScroll);
+      grid.style.transform = `translateX(${scrollAmount}px)`;
+    }, {passive: true});
+
+    wrapper.addEventListener('touchend', () => { isDown = false; });
+    }
+  // ScrollSpy Active Section Indicator (UI/UX Pro Max Skill Guided)
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  if (sections.length && navLinks.length) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
   }
 </script>
 
 </body>
 </html>
+  
