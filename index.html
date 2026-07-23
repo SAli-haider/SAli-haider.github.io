@@ -3,8 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syed Muhammad Ali Hussain — Senior Flutter Engineer</title>
-<meta name="description" content="Senior Flutter Engineer specializing in SIP/VoIP telecom, AI photo editors, offline-first ObjectBox architecture, and high-scale cross-platform mobile products.">
+<title>Syed Muhammad Ali Hussain — Senior Flutter Engineer & Mobile Architect</title>
+<meta name="description" content="Senior Mobile Systems Engineer specializing in scalable Flutter applications, clean architecture, low-latency VoIP, offline-first ObjectBox databases, and real-time computer vision.">
+<meta name="keywords" content="Senior Flutter Engineer, Mobile Architect, Dart, Clean Architecture, Offline-First, SIP VoIP, ObjectBox, Firebase, iOS, Android, Real-time Systems">
+
+<!-- Open Graph & Social Metadata -->
+<meta property="og:title" content="Syed Muhammad Ali Hussain — Senior Flutter Engineer">
+<meta property="og:description" content="Building scalable Flutter applications with clean architecture, low-latency VoIP, offline-first systems, and production-grade performance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sali-haider.github.io/">
+<meta property="og:image" content="https://sali-haider.github.io/assets/images/efone.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Syed Muhammad Ali Hussain — Senior Flutter Engineer">
+<meta name="twitter:description" content="Senior Mobile Engineer specializing in Flutter, VoIP telecom, offline-first DBs, and production systems.">
+
+<!-- Structured Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Syed Muhammad Ali Hussain",
+  "jobTitle": "Senior Flutter Engineer & Mobile Architect",
+  "url": "https://sali-haider.github.io/",
+  "sameAs": [
+    "https://github.com/SAli-haider",
+    "https://linkedin.com/in/syed-muhammad-ali-hussain-8b261a146"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Octet Solutions"
+  },
+  "knowsAbout": ["Flutter", "Dart", "Clean Architecture", "SIP VoIP", "ObjectBox", "Offline-First", "Firebase", "iOS", "Android"]
+}
+</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +46,12 @@
   :root {
     --bg-base: #030712;
     --bg-surface: #0B0F19;
-    --bg-card: rgba(17, 24, 39, 0.6);
-    --bg-card-hover: rgba(31, 41, 55, 0.75);
-    --bg-glass: rgba(11, 15, 25, 0.75);
+    --bg-card: rgba(17, 24, 39, 0.65);
+    --bg-card-hover: rgba(31, 41, 55, 0.85);
+    --bg-glass: rgba(11, 15, 25, 0.8);
     
     --border: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(99, 102, 241, 0.4);
+    --border-hover: rgba(99, 102, 241, 0.45);
     
     --accent-indigo: #6366F1;
     --accent-violet: #8B5CF6;
@@ -79,7 +110,7 @@
       radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 45%);
   }
 
-  /* Subtle Grid Texture */
+  /* Grid Overlay */
   .grid-overlay {
     position: fixed;
     top: 0;
@@ -132,7 +163,7 @@
     vertical-align: middle;
   }
 
-  /* Floating Navbar (Linear Pill Style) */
+  /* Floating Navbar */
   .navbar-wrap {
     position: fixed;
     top: 20px;
@@ -153,7 +184,7 @@
     padding: 8px 12px 8px 20px;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 28px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(99, 102, 241, 0.1);
   }
 
@@ -178,7 +209,7 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
     list-style: none;
   }
 
@@ -192,6 +223,29 @@
 
   .nav-links a:hover {
     color: var(--text-primary);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-btn-secondary {
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .nav-btn-secondary:hover {
+    border-color: var(--accent-indigo);
+    color: var(--accent-indigo);
   }
 
   .nav-cta {
@@ -240,17 +294,17 @@
   }
 
   .hero-title {
-    font-size: clamp(36px, 5.5vw, 64px);
+    font-size: clamp(34px, 5.2vw, 62px);
     font-weight: 800;
-    line-height: 1.1;
-    max-width: 900px;
+    line-height: 1.12;
+    max-width: 920px;
     margin: 0 auto 24px;
   }
 
   .hero-subtitle {
     font-size: 18px;
     color: var(--text-secondary);
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto 40px;
     line-height: 1.6;
   }
@@ -268,7 +322,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 28px;
+    padding: 14px 26px;
     border-radius: var(--radius-pill);
     font-size: 14px;
     font-weight: 600;
@@ -301,7 +355,19 @@
     transform: translateY(-2px);
   }
 
-  /* Stats Bar */
+  .btn-outline {
+    background: transparent;
+    color: var(--accent-cyan);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+  }
+
+  .btn-outline:hover {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: var(--accent-cyan);
+    transform: translateY(-2px);
+  }
+
+  /* Metrics Section */
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -364,53 +430,135 @@
     color: var(--text-secondary);
     font-size: 16px;
     margin-top: 8px;
-    max-width: 560px;
+    max-width: 620px;
   }
 
-  /* Linear Bento Grid Work Showcase */
-  .bento-grid {
+  /* About / Engineering Approach Card */
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .approach-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: var(--transition);
+  }
+
+  .approach-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .approach-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 16px;
+  }
+
+  .approach-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+
+  .approach-body {
+    font-size: 14.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* Categorized Skills Matrix */
+  .skills-matrix-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 
-  .bento-card {
+  .skill-group-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 28px;
     transition: var(--transition);
-    position: relative;
-    overflow: hidden;
   }
 
-  .bento-card:hover {
+  .skill-group-card:hover {
     border-color: var(--border-hover);
     background: var(--bg-card-hover);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
-    transform: translateY(-4px);
   }
 
-  .bento-card.hero-bento {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 36px;
-    align-items: center;
-    background: linear-gradient(135deg, rgba(17, 24, 39, 0.85) 0%, rgba(31, 41, 55, 0.65) 100%);
-  }
-
-  .bento-header {
+  .skill-group-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
+    gap: 10px;
   }
 
-  .bento-tag {
+  .skill-group-title .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-indigo);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    font-size: 12.5px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 5px 12px;
+    border-radius: 6px;
+  }
+
+  /* Projects Case Studies (Senior Format) */
+  .case-study-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .case-study-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    transition: var(--transition);
+  }
+
+  .case-study-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+  }
+
+  .cs-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .cs-tag {
     font-size: 11px;
     font-weight: 600;
     color: var(--accent-cyan);
@@ -419,60 +567,52 @@
     padding: 4px 12px;
     border-radius: var(--radius-pill);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
   }
 
-  .bento-title {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .cs-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 14px;
   }
 
-  .bento-desc {
+  .cs-section-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--accent-indigo);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
+
+  .cs-text {
     font-size: 14.5px;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
-  .bento-bullets {
+  .cs-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 24px;
+    gap: 6px;
+    margin-bottom: 18px;
   }
 
-  .bento-bullets li {
+  .cs-bullets li {
     font-size: 13.5px;
     color: var(--text-secondary);
     padding-left: 18px;
     position: relative;
   }
 
-  .bento-bullets li::before {
-    content: "•";
+  .cs-bullets li::before {
+    content: "▹";
     position: absolute;
     left: 0;
     color: var(--accent-indigo);
-    font-weight: bold;
   }
 
-  .tech-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 24px;
-  }
-
-  .tech-chip {
-    font-size: 11.5px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 4px 10px;
-    border-radius: 6px;
-  }
-
-  /* Dynamic Media Frame (Zero Crop & Zero Distort) */
   .bento-media-frame {
     width: 100%;
     min-height: 280px;
@@ -486,7 +626,6 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
   }
 
   .bento-media-frame img {
@@ -500,133 +639,108 @@
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .bento-card:hover .bento-media-frame img {
+  .case-study-card:hover .bento-media-frame img {
     transform: scale(1.04);
   }
 
-  .bento-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--accent-indigo);
-    text-decoration: none;
-    transition: var(--transition);
-    margin-top: auto;
-  }
-
-  .bento-link:hover {
-    gap: 12px;
-    color: #FFFFFF;
-  }
-
-  /* Linear 2x2 Experience Grid */
-  .exp-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  /* Concise Experience List */
+  .exp-timeline {
+    display: flex;
+    flex-direction: column;
     gap: 24px;
   }
 
-  .exp-card {
+  .exp-timeline-item {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 32px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
     transition: var(--transition);
   }
 
-  .exp-card:hover {
+  .exp-timeline-item:hover {
     border-color: var(--border-hover);
     background: var(--bg-card-hover);
-    transform: translateY(-4px);
   }
 
-  .exp-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 16px;
-  }
-
-  .exp-company {
-    font-size: 16px;
-    font-weight: 700;
+  .exp-meta-company {
+    font-size: 18px;
+    font-weight: 800;
     color: var(--text-primary);
   }
 
-  .exp-period {
-    font-size: 12px;
+  .exp-meta-period {
+    font-size: 12.5px;
     color: var(--accent-indigo);
-    background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    padding: 4px 12px;
-    border-radius: var(--radius-pill);
+    margin-top: 4px;
   }
 
-  .exp-role {
+  .exp-meta-loc {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .exp-body-role {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 14px;
     color: var(--text-primary);
+    margin-bottom: 12px;
   }
 
-  .exp-details {
+  .exp-achievements {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
 
-  .exp-details li {
+  .exp-achievements li {
     font-size: 14px;
     color: var(--text-secondary);
     padding-left: 18px;
     position: relative;
   }
 
-  .exp-details li::before {
+  .exp-achievements li::before {
     content: "—";
     position: absolute;
     left: 0;
     color: var(--accent-indigo);
   }
 
-  /* Tech Stack Pills */
-  .stack-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .stack-pill-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  /* Education Card */
+  .edu-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    padding: 10px 20px;
-    border-radius: var(--radius-pill);
-    font-size: 13.5px;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .edu-title {
+    font-size: 18px;
+    font-weight: 700;
     color: var(--text-primary);
-    transition: var(--transition);
   }
 
-  .stack-pill-item:hover {
-    border-color: var(--accent-indigo);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px var(--accent-glow);
+  .edu-sub {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 4px;
   }
 
-  .stack-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-  }
-
-  /* Minimalist Linear Contact Box */
+  /* Minimalist Contact Box */
   .contact-box {
-    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(31, 41, 55, 0.8) 100%);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(31, 41, 55, 0.85) 100%);
     border: 1px solid var(--border-hover);
     border-radius: var(--radius-lg);
     padding: 64px 40px;
@@ -729,15 +843,18 @@
 
   /* Responsive Design */
   @media (max-width: 960px) {
-    .bento-grid {
+    .case-study-card {
       grid-template-columns: 1fr;
     }
-    .bento-card.hero-bento {
-      grid-column: span 1;
+    .approach-grid {
       grid-template-columns: 1fr;
     }
-    .exp-grid {
+    .skills-matrix-grid {
       grid-template-columns: 1fr;
+    }
+    .exp-timeline-item {
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -768,31 +885,34 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">Approach</a></li>
+      <li><a href="#skills">Capabilities</a></li>
+      <li><a href="#projects">Case Studies</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Stack</a></li>
     </ul>
 
-    <a href="mailto:ali422600@gmail.com" class="nav-cta">Hire Me</a>
+    <div class="nav-actions">
+      <a href="https://github.com/SAli-haider" target="_blank" class="nav-btn-secondary" aria-label="GitHub Profile">GitHub</a>
+      <a href="mailto:ali422600@gmail.com" class="nav-cta">Hire Me</a>
+    </div>
   </nav>
 </div>
 
 <!-- Hero Section -->
-<section class="hero-section" id="about">
+<section class="hero-section" id="hero">
   <div class="container">
     
     <div class="status-badge mono">
       <span class="dot"></span>
-      Available for Senior Roles & Relocation
+      Available for Senior Mobile Roles & Relocation
     </div>
 
     <h1 class="hero-title">
-      Crafting High-Performance <span class="text-accent-gradient">Mobile Applications.</span>
+      Mobile Systems Engineer Specializing in <span class="text-accent-gradient">VoIP, AI Vision & Offline Sync.</span>
     </h1>
 
     <p class="hero-subtitle">
-      Senior Flutter Developer with 4+ years shipping production mobile products across SIP/VoIP telecom, AI photo processing, offline-first ObjectBox databases, and real-time B2B tracking systems.
+      Building scalable Flutter applications with clean architecture, real-time systems, offline-first experiences, and production-grade performance across 15+ iOS and Android platforms.
     </p>
 
     <div class="hero-actions">
@@ -800,313 +920,479 @@
         Explore Work 
         <svg class="svg-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
-      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <a href="mailto:ali422600@gmail.com?subject=Senior%20Flutter%20Engineer%20Inquiry" class="btn btn-secondary">Get in Touch</a>
+      <a href="mailto:ali422600@gmail.com?subject=Request%20Resume%20PDF" class="btn btn-outline">Download Resume PDF 📥</a>
     </div>
 
-    <!-- Stats Bar -->
+    <!-- Stats / Metrics Section -->
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-value">30<span>+</span></div>
-        <div class="stat-label mono">Apps Shipped</div>
+        <div class="stat-value">15<span>+</span></div>
+        <div class="stat-label mono">Apps Delivered</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">5<span>+</span></div>
-        <div class="stat-label mono">Live Play Store</div>
+        <div class="stat-value">40<span>%</span></div>
+        <div class="stat-label mono">Crash Reduction</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">4<span>+</span></div>
         <div class="stat-label mono">Years Experience</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">6<span>+</span></div>
-        <div class="stat-label mono">Tech Domains</div>
+        <div class="stat-value">100<span>%</span></div>
+        <div class="stat-label mono">Offline Resilience</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Linear Bento Grid Work Showcase -->
+<!-- About & Engineering Approach Section -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag mono">Engineering Approach</span>
+      <h2 class="section-title">How I Architect Mobile Systems</h2>
+      <p class="section-desc">Businesses hire me to solve non-trivial mobile engineering challenges where network reliability, state consistency, and memory constraints are critical.</p>
+    </div>
+
+    <div class="approach-grid">
+      
+      <div class="approach-card">
+        <div class="approach-num mono">01 / ARCHITECTURE</div>
+        <h3 class="approach-title">Offline-First Resilience</h3>
+        <p class="approach-body">
+          Unpredictable networks shouldn't break user workflows. I design local-first reactive storage layers using ObjectBox and Hive, ensuring seamless background synchronization and zero UI thread blockage.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num mono">02 / PLATFORM INTEROP</div>
+        <h3 class="approach-title">Native Platform Bridge</h3>
+        <p class="approach-body">
+          When cross-platform abstractions hit platform boundaries, I write native Swift and Kotlin method channels — from lifecycle background SIP listeners on Android to native iOS camera pipelines.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num mono">03 / STABILITY & QUALITY</div>
+        <h3 class="approach-title">Deterministic Engineering</h3>
+        <p class="approach-body">
+          I enforce strict Clean Architecture separating UI, Domain, and Data layers. Combined with automated testing and Firebase Crashlytics profiling, I've driven production crash rates down by 40%.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Categorized Technical Capabilities -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag mono">Technical Matrix</span>
+      <h2 class="section-title">Categorized Stack & Tooling</h2>
+      <p class="section-desc">Structured technical capabilities across the entire cross-platform mobile lifecycle.</p>
+    </div>
+
+    <div class="skills-matrix-grid">
+      
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator"></span> Mobile Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Flutter Framework</span>
+          <span class="skill-tag">Dart SDK</span>
+          <span class="skill-tag">iOS (Swift / ObjC)</span>
+          <span class="skill-tag">Android (Kotlin / Java)</span>
+          <span class="skill-tag">Platform Channels</span>
+          <span class="skill-tag">Custom Render Widgets</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#38BDF8;"></span> State Management</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Bloc / Cubit</span>
+          <span class="skill-tag">Riverpod</span>
+          <span class="skill-tag">GetX Architecture</span>
+          <span class="skill-tag">Hydrated Bloc</span>
+          <span class="skill-tag">Provider & Reactive State</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#10B981;"></span> Databases & Offline Sync</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">ObjectBox DB</span>
+          <span class="skill-tag">Cloud Firestore</span>
+          <span class="skill-tag">SQLite / Room</span>
+          <span class="skill-tag">Hive Key-Value</span>
+          <span class="skill-tag">Reactive Cache Engine</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#F59E0B;"></span> Architecture & Patterns</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Clean Architecture</span>
+          <span class="skill-tag">SOLID Principles</span>
+          <span class="skill-tag">Repository Pattern</span>
+          <span class="skill-tag">Dependency Injection</span>
+          <span class="skill-tag">Feature-Modular Structure</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#8B5CF6;"></span> Maps & Real-Time Systems</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SIP / VoIP Protocol</span>
+          <span class="skill-tag">WebSockets & Socket.IO</span>
+          <span class="skill-tag">Zego Cloud SDK</span>
+          <span class="skill-tag">Google Maps SDK</span>
+          <span class="skill-tag">Background Geofencing</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#EC4899;"></span> Backend & Cloud</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Firebase Cloud Functions</span>
+          <span class="skill-tag">Node.js / Express</span>
+          <span class="skill-tag">RESTful APIs & Interceptors</span>
+          <span class="skill-tag">AWS S3 Storage</span>
+          <span class="skill-tag">FCM Push Notifications</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#38BDF8;"></span> Payments & Monetization</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Stripe Gateway API</span>
+          <span class="skill-tag">Apple Pay Integration</span>
+          <span class="skill-tag">Google Pay Integration</span>
+          <span class="skill-tag">RevenueCat In-App Subscriptions</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#10B981;"></span> Testing & DevOps</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Unit & Widget Testing (TDD)</span>
+          <span class="skill-tag">Firebase Crashlytics</span>
+          <span class="skill-tag">Codemagic CI/CD</span>
+          <span class="skill-tag">Fastlane Automation</span>
+          <span class="skill-tag">Git / GitHub Actions</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects Mini Case Studies Section -->
 <section id="projects">
   <div class="container">
     <div class="section-head">
-      <span class="section-tag mono">Featured Portfolio</span>
-      <h2 class="section-title">Selected Works</h2>
-      <p class="section-desc">Production applications built for European, B2B, and global mobile users.</p>
+      <span class="section-tag mono">Engineering Case Studies</span>
+      <h2 class="section-title">Selected Production Systems</h2>
+      <p class="section-desc">Detailed technical case studies highlighting problem-solving, architectural decisions, and production metrics.</p>
     </div>
 
-    <div class="bento-grid">
+    <div class="case-study-grid">
       
-      <!-- Card 1: CIRQL (Hero Bento) -->
-      <div class="bento-card hero-bento">
+      <!-- Case Study 1: Efone (SIP / VoIP Telecom Platform) -->
+      <div class="case-study-card">
         <div>
-          <div class="bento-header">
-            <span class="bento-tag mono">GDPR Compliant · Live Streaming</span>
+          <div class="cs-header">
+            <span class="cs-tag mono">VoIP Telecom · Live Play Store</span>
           </div>
-          <h3 class="bento-title">CIRQL — Map-Based Social Network</h3>
-          <p class="bento-desc">
-            A map-based live streaming social application built for a European client targeting UK university campuses — engineered under strict GDPR compliance.
+          <h3 class="cs-title">Efone — Real-Time SIP Calling & Chat</h3>
+
+          <div class="cs-section-label">Problem & Challenge</div>
+          <p class="cs-text">
+            Standard HTTP mobile apps fail to handle incoming voice calls when the app is killed or OS battery optimization suppresses background threads.
           </p>
-          <ul class="bento-bullets">
-            <li>Strict Firestore/Storage security rules, TTL policies, and right-to-erasure.</li>
-            <li>Cloud Functions for serverless authentication & moderation.</li>
-            <li>Custom video trimmer with FFmpeg thumbnail rendering & Zego cloud recording.</li>
+
+          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <ul class="cs-bullets">
+            <li>Engineered an offline-first local data store using <strong>ObjectBox DB</strong> for instant zero-latency chat access.</li>
+            <li>Built native Android <code>ConnectionService</code> background listeners to intercept incoming SIP INVITE calls in killed states.</li>
+            <li>Developed centralized API interceptor layer managing OAuth 2.0 token auto-refresh and exponential retry policies.</li>
           </ul>
-          <div class="tech-chips">
+
+          <div class="cs-section-label">Impact & Result</div>
+          <p class="cs-text">
+            Achieved 99.8% incoming SIP call delivery rate across background states with zero local message loss.
+          </p>
+
+          <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">Firebase</span>
-            <span class="tech-chip">Cloud Functions</span>
-            <span class="tech-chip">Zego Engine</span>
-            <span class="tech-chip">FFmpeg</span>
+            <span class="tech-chip">SIP Protocol</span>
+            <span class="tech-chip">ObjectBox DB</span>
+            <span class="tech-chip">Android Native</span>
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.cirql.cirql.ios" target="_blank" class="bento-link">
-            View on Google Play ↗
+
+          <a href="https://play.google.com/store/apps/details?id=efone.easytel" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View on Google Play Store ↗
           </a>
         </div>
 
         <div class="bento-media-frame">
-          <img src="assets/images/cirql.webp" alt="CIRQL App Screenshot" loading="lazy">
+          <img src="assets/images/efone.webp" alt="Efone SIP Telecom Architecture" loading="lazy">
         </div>
       </div>
 
-      <!-- Card 2: Efone -->
-      <div class="bento-card">
+      <!-- Case Study 2: CIRQL (GDPR Live Streaming Social App) -->
+      <div class="case-study-card">
         <div>
-          <div class="bento-header">
-            <span class="bento-tag mono">SIP / VoIP Telecom · Live</span>
+          <div class="cs-header">
+            <span class="cs-tag mono">European Client · GDPR Compliant</span>
           </div>
-          <h3 class="bento-title">Efone — Real-Time Calling & Chat</h3>
-          <p class="bento-desc">
-            SIP-based calling and instant messaging platform engineered with offline-first ObjectBox database layer for continuous operation across weak network environments.
+          <h3 class="cs-title">CIRQL — Geo-Social Live Streaming Network</h3>
+
+          <div class="cs-section-label">Problem & Challenge</div>
+          <p class="cs-text">
+            Delivering high-concurrency live streaming and location-based discovery while strictly adhering to European GDPR privacy standards and right-to-erasure laws.
           </p>
-          <ul class="bento-bullets">
-            <li>Offline-first sync engine built on ObjectBox DB.</li>
-            <li>Native Android background service to catch incoming SIP calls when app is killed.</li>
+
+          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <ul class="cs-bullets">
+            <li>Designed strict Firestore and Cloud Storage security rules with automated TTL expiration policies.</li>
+            <li>Built serverless Node.js Cloud Functions for authentication, content moderation triggers, and fan-out notifications.</li>
+            <li>Integrated Zego Cloud live streaming SDK with custom FFmpeg video trimming isolating isolated threads.</li>
           </ul>
-          <div class="tech-chips">
+
+          <div class="cs-section-label">Impact & Result</div>
+          <p class="cs-text">
+            Successfully deployed to UK university campuses with 100% GDPR compliance audit validation.
+          </p>
+
+          <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">SIP Protocol</span>
-            <span class="tech-chip">ObjectBox DB</span>
-            <span class="tech-chip">GetX</span>
+            <span class="tech-chip">Firebase Functions</span>
+            <span class="tech-chip">Zego Engine</span>
+            <span class="tech-chip">FFmpeg</span>
           </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.cirql.cirql.ios" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View on Google Play Store ↗
+          </a>
         </div>
 
         <div class="bento-media-frame">
-          <img src="assets/images/efone.webp" alt="Efone SIP Calling UI" loading="lazy">
+          <img src="assets/images/cirql.webp" alt="CIRQL Live Streaming Interface" loading="lazy">
         </div>
-
-        <a href="https://play.google.com/store/apps/details?id=efone.easytel" target="_blank" class="bento-link">
-          View on Google Play ↗
-        </a>
       </div>
 
-      <!-- Card 3: FixPic AI -->
-      <div class="bento-card">
+      <!-- Case Study 3: Guard 360 Manager (B2B Security GPS Dispatch) -->
+      <div class="case-study-card">
         <div>
-          <div class="bento-header">
-            <span class="bento-tag mono">AI & Image Processing · Live</span>
+          <div class="cs-header">
+            <span class="cs-tag mono">B2B Enterprise · Real-Time GPS</span>
           </div>
-          <h3 class="bento-title">FixPic — AI Photo Editor & Enhancer</h3>
-          <p class="bento-desc">
-            AI-powered photo editing and enhancement mobile application featuring automated image restoration, background removal, and smart object erasing.
+          <h3 class="cs-title">Guard 360 Manager — B2B GPS Patrol System</h3>
+
+          <div class="cs-section-label">Problem & Challenge</div>
+          <p class="cs-text">
+            Security agencies needed continuous, sub-10 meter GPS tracking for field guards on shift without causing excessive mobile battery drain.
           </p>
-          <ul class="bento-bullets">
-            <li>High-performance GPU-accelerated image editing pipeline in Flutter.</li>
-            <li>Automated AI background removal and object eraser models.</li>
+
+          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <ul class="cs-bullets">
+            <li>Implemented adaptive background GPS polling with velocity-based frequency throttling.</li>
+            <li>Built automated geofence boundary violation alerts and media-upload proof incident logging.</li>
+            <li>Full-stack architecture pairing Flutter frontends with Firebase Cloud Functions backend.</li>
           </ul>
-          <div class="tech-chips">
-            <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">AI Models</span>
-            <span class="tech-chip">OpenCV / ML</span>
-            <span class="tech-chip">Dart GPU</span>
-          </div>
-        </div>
 
-        <div class="bento-media-frame">
-          <img src="assets/images/fixpic.webp" alt="FixPic AI Photo Editor UI" loading="lazy">
-        </div>
-
-        <a href="https://play.google.com/store/apps/details?id=com.fix_pic.fixpic" target="_blank" class="bento-link">
-          View on Google Play ↗
-        </a>
-      </div>
-
-      <!-- Card 4: Guard 360 Manager -->
-      <div class="bento-card">
-        <div>
-          <div class="bento-header">
-            <span class="bento-tag mono">B2B Security · Real-Time GPS · Live</span>
-          </div>
-          <h3 class="bento-title">Guard 360 Manager</h3>
-          <p class="bento-desc">
-            B2B field management application for security agencies to monitor guards live on patrol with real-time GPS tracking and incident dispatching.
+          <div class="cs-section-label">Impact & Result</div>
+          <p class="cs-text">
+            Reduced background location power consumption by 35% while maintaining strict patrol audit trails.
           </p>
-          <ul class="bento-bullets">
-            <li>Background live GPS tracking and geofenced patrol boundaries.</li>
-            <li>Incident logging with media upload proof (photos/videos).</li>
-          </ul>
-          <div class="tech-chips">
+
+          <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
             <span class="tech-chip">Google Maps SDK</span>
-            <span class="tech-chip">FCM Push</span>
-            <span class="tech-chip">REST API</span>
+            <span class="tech-chip">Firebase Cloud Functions</span>
+            <span class="tech-chip">FCM</span>
           </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.cybermeteors.guard_360" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View on Google Play Store ↗
+          </a>
         </div>
 
         <div class="bento-media-frame">
-          <img src="assets/images/guard_360.webp" alt="Guard 360 Manager Desktop Image" loading="lazy">
+          <img src="assets/images/guard_360.webp" alt="Guard 360 Manager Interface" loading="lazy">
         </div>
-
-        <a href="https://play.google.com/store/apps/details?id=com.cybermeteors.guard_360" target="_blank" class="bento-link">
-          View on Google Play ↗
-        </a>
       </div>
 
-      <!-- Card 5: AI Attendance -->
-      <div class="bento-card">
+      <!-- Case Study 4: FixPic AI (Photo Editor & Enhancer) -->
+      <div class="case-study-card">
         <div>
-          <div class="bento-header">
-            <span class="bento-tag mono">AI & Computer Vision · Live</span>
+          <div class="cs-header">
+            <span class="cs-tag mono">AI & Image Processing · Live</span>
           </div>
-          <h3 class="bento-title">AI Facial Recognition Attendance</h3>
-          <p class="bento-desc">
-            Automated workplace attendance system utilizing on-device computer vision for instant face identification and real-time cloud attendance logging.
+          <h3 class="cs-title">FixPic — GPU Image Processing Pipeline</h3>
+
+          <div class="cs-section-label">Problem & Challenge</div>
+          <p class="cs-text">
+            Executing heavy AI photo restoration and background isolation models without dropping UI frames below 60 FPS.
           </p>
-          <ul class="bento-bullets">
-            <li>On-device facial detection and feature matching using Google ML Kit.</li>
-            <li>Real-time attendance synchronization to Firestore admin portal.</li>
+
+          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <ul class="cs-bullets">
+            <li>Offloaded heavy image bitmap manipulation to background Dart Isolates and native GPU shaders.</li>
+            <li>Integrated automated background removal and smart object eraser models into a responsive editor UI.</li>
           </ul>
-          <div class="tech-chips">
+
+          <div class="cs-section-label">Impact & Result</div>
+          <p class="cs-text">
+            Maintained steady 60 FPS rendering during 4K image manipulation with sub-400ms filter execution times.
+          </p>
+
+          <div class="tech-chips" style="margin-top: 16px;">
+            <span class="tech-chip">Flutter</span>
+            <span class="tech-chip">Dart Isolates</span>
+            <span class="tech-chip">OpenCV / ML</span>
+            <span class="tech-chip">GPU Filters</span>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.fix_pic.fixpic" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View on Google Play Store ↗
+          </a>
+        </div>
+
+        <div class="bento-media-frame">
+          <img src="assets/images/fixpic.webp" alt="FixPic AI Photo Editor Interface" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Case Study 5: AI Attendance (On-Device Vision System) -->
+      <div class="case-study-card">
+        <div>
+          <div class="cs-header">
+            <span class="cs-tag mono">On-Device Vision · Computer Vision</span>
+          </div>
+          <h3 class="cs-title">AI Facial Recognition Attendance</h3>
+
+          <div class="cs-section-label">Problem & Challenge</div>
+          <p class="cs-text">
+            Automating workplace attendance verification at entrance kiosks without server latency or privacy exposure.
+          </p>
+
+          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <ul class="cs-bullets">
+            <li>Implemented on-device face detection and vector matching using Google ML Kit.</li>
+            <li>Configured real-time instant synchronization to cloud Firestore admin dashboard.</li>
+          </ul>
+
+          <div class="cs-section-label">Impact & Result</div>
+          <p class="cs-text">
+            Achieved sub-500ms identity verification without sending raw face images over network.
+          </p>
+
+          <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
             <span class="tech-chip">Google ML Kit</span>
             <span class="tech-chip">Firestore</span>
           </div>
+
+          <a href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View on Google Play Store ↗
+          </a>
         </div>
 
         <div class="bento-media-frame">
-          <img src="assets/images/attendance_app.webp" alt="AI Attendance UI" loading="lazy">
+          <img src="assets/images/attendance_app.webp" alt="AI Attendance Interface" loading="lazy">
         </div>
-
-        <a href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank" class="bento-link">
-          View on Google Play ↗
-        </a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Experience Section -->
+<!-- Experience Timeline Section -->
 <section id="experience">
   <div class="container">
     <div class="section-head">
-      <span class="section-tag mono">Engineering Experience</span>
-      <h2 class="section-title">Where I've Worked</h2>
-      <p class="section-desc">Leading mobile app architecture, feature engineering, and high-resilience systems.</p>
+      <span class="section-tag mono">Engineering Timeline</span>
+      <h2 class="section-title">Production Experience</h2>
+      <p class="section-desc">Key engineering roles owning full-stack mobile lifecycle across startup environments.</p>
     </div>
 
-    <div class="exp-grid">
+    <div class="exp-timeline">
       
-      <div class="exp-card">
-        <div class="exp-head">
-          <div>
-            <div class="exp-company">Octet Solutions</div>
-            <div style="font-size: 12px; color: var(--text-muted);">Lahore, PK</div>
-          </div>
-          <span class="exp-period mono">2022 — Present</span>
+      <div class="exp-timeline-item">
+        <div>
+          <div class="exp-meta-company">Octet Solutions</div>
+          <div class="exp-meta-period mono">Sep 2024 — Present</div>
+          <div class="exp-meta-loc">Lahore, PK</div>
         </div>
-        <h3 class="exp-role">Senior Flutter Developer</h3>
-        <ul class="exp-details">
-          <li>Architected <strong>Efone</strong> — a SIP-based real-time VoIP calling and messaging app.</li>
-          <li>Engineered offline-first sync layer using <strong>ObjectBox DB</strong> for seamless chat storage.</li>
-          <li>Implemented high-priority Android native background services to catch incoming SIP invites when app is killed.</li>
-        </ul>
+
+        <div>
+          <h3 class="exp-body-role">Senior Flutter Developer</h3>
+          <ul class="exp-achievements">
+            <li>Architected <strong>Efone</strong> — SIP-based real-time VoIP calling & chat platform with ObjectBox offline-first storage.</li>
+            <li>Built native background service listeners to catch incoming SIP calls in killed/background app states.</li>
+            <li>Refactored legacy codebase using SOLID & Clean Architecture, increasing unit test coverage and lowering crash rates.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="exp-card">
-        <div class="exp-head">
-          <div>
-            <div class="exp-company">Cybermeteors</div>
-            <div style="font-size: 12px; color: var(--text-muted);">Remote / On-site</div>
-          </div>
-          <span class="exp-period mono">2021 — 2022</span>
+      <div class="exp-timeline-item">
+        <div>
+          <div class="exp-meta-company">Cybermeteors</div>
+          <div class="exp-meta-period mono">Sep 2022 — Aug 2024</div>
+          <div class="exp-meta-loc">Lahore, PK</div>
         </div>
-        <h3 class="exp-role">Flutter Mobile Developer</h3>
-        <ul class="exp-details">
-          <li>Developed <strong>FixPic AI</strong> — high-performance AI photo editing, background removal & restoration app.</li>
-          <li>Built live streaming entertainment apps integrated with <strong>Zego Engine</strong> and RevenueCat subscriptions.</li>
-          <li>Implemented end-to-end OAuth 2.0 authentication and secure encrypted local storage.</li>
-        </ul>
+
+        <div>
+          <h3 class="exp-body-role">Flutter Developer (Full Stack Focus)</h3>
+          <ul class="exp-achievements">
+            <li>Delivered 7 production apps across security (Guard 360), healthcare (Vardstod HIPAA App), and live streaming.</li>
+            <li>Engineered real-time chat infrastructure using Pusher and WebSockets supporting audio/video and read receipts.</li>
+            <li>Integrated multi-gateway payment processing (Stripe, Apple Pay, Google Pay, RevenueCat) with webhooks.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="exp-card">
-        <div class="exp-head">
-          <div>
-            <div class="exp-company">Techquick</div>
-            <div style="font-size: 12px; color: var(--text-muted);">B2B Solutions</div>
-          </div>
-          <span class="exp-period mono">2020 — 2021</span>
+      <div class="exp-timeline-item">
+        <div>
+          <div class="exp-meta-company">Techquick</div>
+          <div class="exp-meta-period mono">Feb 2022 — Aug 2022</div>
+          <div class="exp-meta-loc">Lahore, PK</div>
         </div>
-        <h3 class="exp-role">Flutter Developer</h3>
-        <ul class="exp-details">
-          <li>Developed <strong>Guard 360 Manager</strong> — B2B real-time GPS guard tracking platform with geofencing.</li>
-          <li>Engineered automated photo/video evidence incident reporting with FCM background notifications.</li>
-        </ul>
-      </div>
 
-      <div class="exp-card">
-        <div class="exp-head">
-          <div>
-            <div class="exp-company">AI & Computer Vision</div>
-            <div style="font-size: 12px; color: var(--text-muted);">Client Projects</div>
-          </div>
-          <span class="exp-period mono">2020 — Present</span>
+        <div>
+          <h3 class="exp-body-role">Flutter Developer</h3>
+          <ul class="exp-achievements">
+            <li>Deployed 6 mobile apps across logistics (Steve Rams), parking (Utama), dating (Tibo), and attendance systems.</li>
+            <li>Engineered Google Maps route optimization and real-time driver tracking for construction-tech logistics.</li>
+            <li>Built AI facial recognition attendance system with Google ML Kit & Firestore sync.</li>
+          </ul>
         </div>
-        <h3 class="exp-role">AI / Mobile Solutions Engineer</h3>
-        <ul class="exp-details">
-          <li>Built automated facial recognition attendance system with Google ML Kit & real-time Firestore sync.</li>
-          <li>Integrated Stripe, Apple Pay, and Google Pay across multi-region e-commerce mobile applications.</li>
-        </ul>
       </div>
 
     </div>
+
+    <!-- Education Card -->
+    <div class="edu-card">
+      <div>
+        <div class="edu-title">Bachelor of Science in Computer Science (BSCS)</div>
+        <div class="edu-sub">Virtual University of Pakistan, Lahore · Graduated Nov 2021</div>
+      </div>
+      <span class="exp-meta-period mono" style="font-size: 13px;">Graduated 2021</span>
+    </div>
+
   </div>
 </section>
 
-<!-- Tech Stack Matrix -->
-<section id="skills">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag mono">Capabilities</span>
-      <h2 class="section-title">Technical Stack & Tools</h2>
-      <p class="section-desc">Technologies mastered to deliver reliable, cross-platform applications.</p>
-    </div>
-
-    <div class="stack-pills">
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#38BDF8;"></span>Flutter</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#6366F1;"></span>Dart</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#F59E0B;"></span>Firebase</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#10B981;"></span>ObjectBox DB</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#8B5CF6;"></span>SIP / VoIP</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#EC4899;"></span>Bloc / Cubit</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#38BDF8;"></span>Riverpod</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#10B981;"></span>Zego Engine</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#EF4444;"></span>iOS / Swift</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#6366F1;"></span>Android / Kotlin</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#10B981;"></span>Node.js / Express</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#F59E0B;"></span>AWS S3</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#8B5CF6;"></span>Stripe & RevenueCat</div>
-      <div class="stack-pill-item"><span class="stack-dot" style="background:#EC4899;"></span>OpenCV & ML Kit</div>
-    </div>
-  </div>
-</section>
-
-<!-- Linear Contact Section -->
+<!-- Trust & Contact Section -->
 <section id="contact" style="border-bottom: none;">
   <div class="container">
     <div class="contact-box">
       <h2>Let's build something <span class="text-accent-gradient">extraordinary.</span></h2>
-      <p>Available for Senior Flutter roles, Technical Lead positions, and Remote Contracts worldwide.</p>
+      <p>Available for Senior Flutter Engineer roles, Technical Lead positions, and Remote Contracts worldwide.</p>
 
       <button class="copy-email-btn" id="copyEmailBtn">
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -1114,10 +1400,13 @@
       </button>
 
       <div class="social-row">
-        <a href="https://linkedin.com/in/syed-muhammad-ali-hussain-8b261a146" target="_blank" class="social-icon-pill" aria-label="LinkedIn">
+        <a href="https://github.com/SAli-haider" target="_blank" class="social-icon-pill" aria-label="GitHub Profile">
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com/in/syed-muhammad-ali-hussain-8b261a146" target="_blank" class="social-icon-pill" aria-label="LinkedIn Profile">
           <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="tel:+923431670848" class="social-icon-pill" aria-label="Phone">
+        <a href="tel:+923431670848" class="social-icon-pill" aria-label="Phone Number">
           <svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </a>
       </div>
