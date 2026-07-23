@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Syed Muhammad Ali Hussain — Senior Full Stack Flutter Engineer & Mobile Architect</title>
-<meta name="description" content="Senior Full Stack Flutter Engineer & Mobile Architect with 4+ years of production experience shipping 15+ iOS/Android apps across VoIP telecom, AI vision, HIPAA/GDPR systems, and offline-first ObjectBox databases.">
-<meta name="keywords" content="Senior Flutter Engineer, Staff Mobile Architect, Full Stack Flutter, Node.js, Firebase Cloud Functions, SIP VoIP, ObjectBox DB, Clean Architecture, iOS, Android, HIPAA, GDPR">
+<title>Syed Muhammad Ali Hussain — Full Stack Flutter Developer</title>
+<meta name="description" content="Full Stack Flutter Developer with 3+ years experience designing, developing, and shipping 15+ production mobile applications across Android and iOS. Expertise in CIRQL, Efone SIP/VoIP, Guard 360, FixPic AI, AI Attendance, ObjectBox DB, Firebase Cloud Functions, Node.js, and Google ML Kit.">
+<meta name="keywords" content="Full Stack Flutter Developer, Syed Muhammad Ali Hussain, CIRQL, Efone, Guard 360, FixPic AI, AI Attendance, Flutter, Dart, iOS, Android, Firebase Cloud Functions, Node.js, SIP VoIP, ObjectBox, HIPAA, Google Maps, Fastlane">
 <meta name="author" content="Syed Muhammad Ali Hussain">
 
 <!-- Open Graph & Social Metadata -->
-<meta property="og:title" content="Syed Muhammad Ali Hussain — Senior Full Stack Flutter Engineer">
-<meta property="og:description" content="Building high-scale Flutter & Node.js mobile systems with Clean Architecture, offline-first ObjectBox databases, low-latency VoIP, and 40% crash reduction.">
+<meta property="og:title" content="Syed Muhammad Ali Hussain — Full Stack Flutter Developer">
+<meta property="og:description" content="Full Stack Flutter Developer with 3+ years experience shipping 15+ production applications. Specialized in real-time systems, CIRQL, Efone SIP calling, Guard 360 GPS, FixPic AI, ObjectBox offline DBs, and Firebase.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sali-haider.github.io/">
-<meta property="og:image" content="https://sali-haider.github.io/assets/images/efone.webp">
+<meta property="og:image" content="https://sali-haider.github.io/assets/images/cirql.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Syed Muhammad Ali Hussain — Senior Flutter Engineer">
-<meta name="twitter:description" content="Senior Mobile Systems Architect specializing in Flutter, SIP VoIP, offline DBs, and enterprise systems.">
+<meta name="twitter:title" content="Syed Muhammad Ali Hussain — Full Stack Flutter Developer">
+<meta name="twitter:description" content="Full Stack Flutter Developer with 3+ years experience shipping 15+ production apps.">
 
 <!-- Structured Schema.org JSON-LD -->
 <script type="application/ld+json">
@@ -24,7 +24,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Syed Muhammad Ali Hussain",
-  "jobTitle": "Senior Full Stack Flutter Engineer & Mobile Architect",
+  "jobTitle": "Full Stack Flutter Developer",
   "url": "https://sali-haider.github.io/",
   "sameAs": [
     "https://github.com/SAli-haider",
@@ -35,9 +35,9 @@
     "name": "Octet Solutions"
   },
   "knowsAbout": [
-    "Flutter", "Dart", "Clean Architecture", "Node.js", "Firebase Cloud Functions",
-    "SIP VoIP Telecom", "ObjectBox Database", "Offline-First Systems", "HIPAA Compliance",
-    "GDPR Compliance", "Google ML Kit", "Stripe API", "RevenueCat", "Fastlane", "Codemagic"
+    "Flutter", "Dart", "iOS", "Android", "Firebase Cloud Functions", "Node.js",
+    "RESTful APIs", "SIP VoIP Telecom", "ObjectBox Database", "Offline-First",
+    "HIPAA Compliance", "Google ML Kit", "Stripe", "RevenueCat", "Fastlane", "Codemagic"
   ]
 }
 </script>
@@ -132,7 +132,7 @@
   }
 
   .container {
-    max-width: 1160px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 24px;
     position: relative;
@@ -272,7 +272,7 @@
 
   /* Hero Section */
   .hero-section {
-    padding: 160px 0 90px;
+    padding: 160px 0 70px;
     text-align: center;
   }
 
@@ -283,7 +283,7 @@
     background: rgba(16, 185, 129, 0.1);
     border: 1px solid rgba(16, 185, 129, 0.25);
     color: var(--accent-emerald);
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: var(--radius-pill);
     font-size: 12.5px;
     font-weight: 500;
@@ -302,7 +302,7 @@
     font-size: clamp(34px, 5.2vw, 62px);
     font-weight: 800;
     line-height: 1.12;
-    max-width: 940px;
+    max-width: 960px;
     margin: 0 auto 24px;
   }
 
@@ -320,7 +320,7 @@
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
 
   .btn {
@@ -407,15 +407,22 @@
     margin-top: 4px;
   }
 
+  .stat-context {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    line-height: 1.3;
+  }
+
   /* Section Shell */
   section {
-    padding: 100px 0;
+    padding: 80px 0;
     border-top: 1px solid var(--border);
     position: relative;
   }
 
   .section-head {
-    margin-bottom: 56px;
+    margin-bottom: 44px;
   }
 
   .section-tag {
@@ -438,137 +445,70 @@
     max-width: 660px;
   }
 
-  /* Engineering Philosophy Card Grid */
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .approach-card {
+  /* Personal Bio Card */
+  .bio-card {
     background: var(--bg-card);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-hover);
     border-radius: var(--radius-lg);
     padding: 32px;
-    transition: var(--transition);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 28px;
+    align-items: center;
   }
 
-  .approach-card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-    transform: translateY(-4px);
+  .bio-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFFFFF;
+    box-shadow: 0 10px 30px var(--accent-glow);
+    border: 2px solid rgba(255, 255, 255, 0.15);
   }
 
-  .approach-num {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent-cyan);
-    margin-bottom: 16px;
-  }
-
-  .approach-title {
-    font-size: 20px;
-    font-weight: 700;
+  .bio-name {
+    font-size: 22px;
+    font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 12px;
+    margin-bottom: 4px;
   }
 
-  .approach-body {
-    font-size: 14.5px;
+  .bio-title {
+    font-size: 13.5px;
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    margin-bottom: 10px;
+  }
+
+  .bio-text {
+    font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.6;
   }
 
-  /* Architecture Diagrams Flow Block */
-  .arch-diagram-box {
-    background: rgba(11, 15, 25, 0.9);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    padding: 24px;
-    margin-top: 24px;
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    overflow-x: auto;
-  }
 
-  .arch-node {
-    color: var(--accent-cyan);
-    font-weight: 600;
-  }
 
-  .arch-arrow {
-    color: var(--accent-indigo);
-  }
-
-  /* Categorized Skills Matrix */
-  .skills-matrix-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .skill-group-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    transition: var(--transition);
-  }
-
-  .skill-group-card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-  }
-
-  .skill-group-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .skill-group-title .indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent-indigo);
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .skill-tag {
-    font-size: 12.5px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 5px 12px;
-    border-radius: 6px;
-  }
-
-  /* Deep Engineering Case Study Showcase */
+  /* Featured Case Studies Grid */
   .case-study-grid {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 40px;
   }
 
   .case-study-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 40px;
+    padding: 36px;
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 40px;
+    gap: 36px;
     align-items: center;
     transition: var(--transition);
   }
@@ -598,7 +538,7 @@
   }
 
   .cs-title {
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 800;
     margin-bottom: 14px;
   }
@@ -609,7 +549,7 @@
     color: var(--accent-indigo);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-top: 16px;
+    margin-top: 14px;
     margin-bottom: 4px;
   }
 
@@ -643,8 +583,8 @@
 
   .bento-media-frame {
     width: 100%;
-    min-height: 280px;
-    max-height: 380px;
+    min-height: 260px;
+    max-height: 360px;
     background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.12) 0%, rgba(0, 0, 0, 0.6) 100%);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
@@ -658,7 +598,7 @@
 
   .bento-media-frame img {
     max-width: 100%;
-    max-height: 320px;
+    max-height: 300px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -671,7 +611,192 @@
     transform: scale(1.04);
   }
 
-  /* Concise Experience List */
+  .bento-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-indigo);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .bento-link:hover {
+    color: #FFFFFF;
+  }
+
+  /* Horizontal Auto-Scroll Marquee Slider (UI/UX Pro Max Skill Guided) */
+  .more-projects-head {
+    margin-top: 48px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .slider-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .slider-arrow-btn:hover {
+    border-color: var(--accent-indigo);
+    color: var(--accent-indigo);
+    transform: scale(1.08);
+  }
+
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0 20px;
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    cursor: grab;
+  }
+
+  .marquee-wrapper:active {
+    cursor: grabbing;
+  }
+
+  .compact-projects-grid {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: autoScrollMarquee 26s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-wrapper:hover .compact-projects-grid {
+    animation-play-state: paused;
+  }
+
+  @keyframes autoScrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .compact-projects-grid {
+      animation: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+    .compact-project-card {
+      scroll-snap-align: start;
+    }
+  }
+
+  .compact-project-card {
+    width: 330px;
+    flex-shrink: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+  .compact-project-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .cp-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .cp-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  /* 4-Category Technical Matrix */
+  .skills-matrix-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .skill-group-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: var(--transition);
+  }
+
+  .skill-group-card:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-hover);
+  }
+
+  .skill-group-title {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skill-group-title .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-indigo);
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    font-size: 12.5px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 5px 12px;
+    border-radius: 6px;
+  }
+
+  /* Experience Timeline */
   .exp-timeline {
     display: flex;
     flex-direction: column;
@@ -685,7 +810,7 @@
     padding: 32px;
     display: grid;
     grid-template-columns: 240px 1fr;
-    gap: 32px;
+    gap: 28px;
     transition: var(--transition);
   }
 
@@ -740,108 +865,28 @@
     color: var(--accent-indigo);
   }
 
-  /* Endorsements / Testimonials Block */
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .testimonial-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    position: relative;
-  }
-
-  .testimonial-quote {
-    font-size: 15px;
-    color: var(--text-primary);
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .author-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-violet));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: #FFFFFF;
-    font-size: 14px;
-  }
-
-  .author-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-
-  .author-role {
-    font-size: 12.5px;
-    color: var(--text-muted);
-  }
-
-  /* FAQ Accordion / Grid */
-  .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .faq-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-  }
-
-  .faq-question {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-  }
-
-  .faq-answer {
-    font-size: 14.5px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-
   /* Education Card */
   .edu-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 32px;
+    padding: 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 32px;
+    margin-top: 24px;
   }
 
   .edu-title {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--text-primary);
   }
 
   .edu-sub {
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--text-secondary);
     margin-top: 4px;
   }
@@ -851,21 +896,21 @@
     background: linear-gradient(135deg, var(--bg-card) 0%, rgba(31, 41, 55, 0.85) 100%);
     border: 1px solid var(--border-hover);
     border-radius: var(--radius-lg);
-    padding: 64px 40px;
+    padding: 60px 36px;
     text-align: center;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   }
 
   .contact-box h2 {
-    font-size: clamp(30px, 4vw, 46px);
+    font-size: clamp(30px, 4vw, 44px);
     margin-bottom: 16px;
   }
 
   .contact-box p {
-    font-size: 17px;
+    font-size: 16.5px;
     color: var(--text-secondary);
-    max-width: 580px;
-    margin: 0 auto 36px;
+    max-width: 600px;
+    margin: 0 auto 32px;
   }
 
   .copy-email-btn {
@@ -950,31 +995,29 @@
   }
 
   /* Responsive Design */
-  @media (max-width: 1024px) {
-    .skills-matrix-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
   @media (max-width: 960px) {
+    .bio-card {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .bio-avatar {
+      margin: 0 auto;
+    }
+    .pillars-bento-grid {
+      grid-template-columns: 1fr;
+    }
     .case-study-card {
       grid-template-columns: 1fr;
     }
-    .approach-grid {
-      grid-template-columns: 1fr;
-    }
-    .skills-matrix-grid {
+    .skills-matrix-grid-4 {
       grid-template-columns: 1fr;
     }
     .exp-timeline-item {
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 12px;
     }
     .stats-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-    .testimonial-grid, .faq-grid {
-      grid-template-columns: 1fr;
     }
   }
 
@@ -1002,15 +1045,17 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="#about">Philosophy</a></li>
-      <li><a href="#skills">Stack</a></li>
       <li><a href="#projects">Case Studies</a></li>
-      <li><a href="#experience">Timeline</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
     </ul>
 
     <div class="nav-actions">
       <a href="https://github.com/SAli-haider" target="_blank" class="nav-btn-secondary" aria-label="GitHub Profile">GitHub</a>
+      <a href="assets/resume.pdf" download="Syed_Muhammad_Ali_Hussain_Resume.pdf" class="nav-btn-secondary" aria-label="Download Resume PDF">
+        Resume 
+        <svg class="svg-icon" viewBox="0 0 24 24" style="width:13px; height:13px; margin-left:2px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </a>
       <a href="mailto:ali422600@gmail.com" class="nav-cta">Hire Me</a>
     </div>
   </nav>
@@ -1020,272 +1065,65 @@
 <section class="hero-section" id="hero">
   <div class="container">
     
-    <div class="status-badge mono">
-      <span class="dot"></span>
-      Available for Senior Mobile Roles & Relocation
-    </div>
+
 
     <h1 class="hero-title">
-      Mobile Systems Engineer Specializing in <span class="text-accent-gradient">VoIP, AI Vision & Offline Sync.</span>
+      Senior Full Stack <span class="text-accent-gradient">Flutter Engineer & Mobile Architect</span>
     </h1>
 
     <p class="hero-subtitle">
-      Building scalable Flutter applications with clean architecture, real-time systems, offline-first experiences, and production-grade performance across 15+ iOS and Android platforms.
+      Crafting resilient, high-performance mobile applications with Clean Architecture, offline-first persistence, and live streaming real-time engines.
     </p>
 
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">
-        Explore Work 
+        Explore Projects 
         <svg class="svg-icon" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
-      <a href="mailto:ali422600@gmail.com?subject=Senior%20Flutter%20Engineer%20Inquiry" class="btn btn-secondary">Get in Touch</a>
-      <a href="mailto:ali422600@gmail.com?subject=Request%20Resume%20PDF" class="btn btn-outline">Download Resume PDF 📥</a>
+      <a href="mailto:ali422600@gmail.com?subject=Flutter%20Developer%20Inquiry" class="btn btn-secondary">Get in Touch</a>
     </div>
 
-    <!-- Stats / Metrics Section -->
+    <!-- Key Metrics Section -->
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-value">15<span>+</span></div>
         <div class="stat-label mono">Apps Delivered</div>
+        <div class="stat-context">Android & iOS production apps shipped</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">3<span>+</span></div>
+        <div class="stat-label mono">Years Experience</div>
+        <div class="stat-context">Full-stack mobile & backend lifecycle</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">40<span>%</span></div>
         <div class="stat-label mono">Crash Reduction</div>
+        <div class="stat-context">Optimized via Crashlytics & performance profiling</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">4<span>+</span></div>
-        <div class="stat-label mono">Years Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value">100<span>%</span></div>
-        <div class="stat-label mono">Offline Resilience</div>
+        <div class="stat-value">BS<span>CS</span></div>
+        <div class="stat-label mono">Computer Science</div>
+        <div class="stat-context">Virtual University of Pakistan (Nov 2021)</div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- About & Engineering Philosophy Section -->
-<section id="about">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag mono">Engineering Philosophy</span>
-      <h2 class="section-title">How I Architect Mobile Systems</h2>
-      <p class="section-desc">Businesses hire me to solve non-trivial mobile engineering challenges where network reliability, state consistency, and memory constraints are critical.</p>
-    </div>
 
-    <div class="approach-grid">
-      
-      <div class="approach-card">
-        <div class="approach-num mono">01 / ARCHITECTURE</div>
-        <h3 class="approach-title">Offline-First Resilience</h3>
-        <p class="approach-body">
-          Unpredictable networks shouldn't break user workflows. I design local-first reactive storage layers using ObjectBox and Hive, ensuring seamless background synchronization and zero UI thread blockage.
-        </p>
 
-        <!-- Visual Architecture Flow Diagram -->
-        <div class="arch-diagram-box">
-          <span class="arch-node">UI View</span> <span class="arch-arrow">➔</span> <span class="arch-node">ObjectBox DB</span> <span class="arch-arrow">➔</span> <span class="arch-node">Sync Worker</span> <span class="arch-arrow">➔</span> <span class="arch-node">Node.js API</span>
-        </div>
-      </div>
-
-      <div class="approach-card">
-        <div class="approach-num mono">02 / PLATFORM INTEROP</div>
-        <h3 class="approach-title">Native Platform Bridge</h3>
-        <p class="approach-body">
-          When cross-platform abstractions hit platform boundaries, I write native Swift and Kotlin method channels — from lifecycle background SIP listeners on Android to native iOS camera pipelines.
-        </p>
-
-        <!-- Visual Architecture Flow Diagram -->
-        <div class="arch-diagram-box">
-          <span class="arch-node">Flutter UI</span> <span class="arch-arrow">➔</span> <span class="arch-node">MethodChannel</span> <span class="arch-arrow">➔</span> <span class="arch-node">Kotlin Service</span> <span class="arch-arrow">➔</span> <span class="arch-node">SIP Connection</span>
-        </div>
-      </div>
-
-      <div class="approach-card">
-        <div class="approach-num mono">03 / STABILITY & QUALITY</div>
-        <h3 class="approach-title">Deterministic Engineering</h3>
-        <p class="approach-body">
-          I enforce strict Clean Architecture separating UI, Domain, and Data layers. Combined with automated testing and Firebase Crashlytics profiling, I've driven production crash rates down by 40%.
-        </p>
-
-        <!-- Visual Architecture Flow Diagram -->
-        <div class="arch-diagram-box">
-          <span class="arch-node">Bloc/Cubit</span> <span class="arch-arrow">➔</span> <span class="arch-node">Use Case</span> <span class="arch-arrow">➔</span> <span class="arch-node">Repository</span> <span class="arch-arrow">➔</span> <span class="arch-node">Crashlytics Log</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Categorized Technical Capabilities -->
-<section id="skills">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag mono">Technical Matrix</span>
-      <h2 class="section-title">Categorized Stack & Tooling</h2>
-      <p class="section-desc">Structured technical capabilities across the entire cross-platform mobile lifecycle.</p>
-    </div>
-
-    <div class="skills-matrix-grid">
-      
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator"></span> Mobile Development</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Flutter Framework</span>
-          <span class="skill-tag">Dart SDK</span>
-          <span class="skill-tag">iOS (Swift / ObjC)</span>
-          <span class="skill-tag">Android (Kotlin / Java)</span>
-          <span class="skill-tag">Platform Channels</span>
-          <span class="skill-tag">Custom Render Widgets</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#38BDF8;"></span> State Management</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Bloc / Cubit</span>
-          <span class="skill-tag">Riverpod</span>
-          <span class="skill-tag">GetX Architecture</span>
-          <span class="skill-tag">Hydrated Bloc</span>
-          <span class="skill-tag">Provider & Reactive State</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#10B981;"></span> Databases & Offline Sync</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">ObjectBox DB</span>
-          <span class="skill-tag">Cloud Firestore</span>
-          <span class="skill-tag">SQLite / Room</span>
-          <span class="skill-tag">Hive Key-Value</span>
-          <span class="skill-tag">Reactive Cache Engine</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#F59E0B;"></span> Architecture & Patterns</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Clean Architecture</span>
-          <span class="skill-tag">SOLID Principles</span>
-          <span class="skill-tag">Repository Pattern</span>
-          <span class="skill-tag">Dependency Injection</span>
-          <span class="skill-tag">Feature-Modular Structure</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#8B5CF6;"></span> Maps & Real-Time Systems</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">SIP / VoIP Protocol</span>
-          <span class="skill-tag">WebSockets & Socket.IO</span>
-          <span class="skill-tag">Zego Cloud SDK</span>
-          <span class="skill-tag">Google Maps SDK</span>
-          <span class="skill-tag">Background Geofencing</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#EC4899;"></span> Backend & Cloud</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Firebase Cloud Functions</span>
-          <span class="skill-tag">Node.js / Express</span>
-          <span class="skill-tag">RESTful APIs & Interceptors</span>
-          <span class="skill-tag">AWS S3 Storage</span>
-          <span class="skill-tag">FCM Push Notifications</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#38BDF8;"></span> Payments & Monetization</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Stripe Gateway API</span>
-          <span class="skill-tag">Apple Pay Integration</span>
-          <span class="skill-tag">Google Pay Integration</span>
-          <span class="skill-tag">RevenueCat In-App Subscriptions</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#10B981;"></span> Testing & DevOps</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Unit & Widget Testing (TDD)</span>
-          <span class="skill-tag">Firebase Crashlytics</span>
-          <span class="skill-tag">Codemagic CI/CD</span>
-          <span class="skill-tag">Fastlane Automation</span>
-          <span class="skill-tag">Git / GitHub Actions</span>
-        </div>
-      </div>
-
-      <div class="skill-group-card">
-        <h3 class="skill-group-title"><span class="indicator" style="background:#EF4444;"></span> Security & Compliance</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">HIPAA Medical Encryption</span>
-          <span class="skill-tag">GDPR Privacy & TTL</span>
-          <span class="skill-tag">OAuth 2.0 & JWT Interceptors</span>
-          <span class="skill-tag">Secure Key Storage</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Projects Mini Case Studies Section -->
+<!-- Featured Projects (Top 3 Ordered Exactly: CIRQL -> Efone -> Guard 360) -->
 <section id="projects">
   <div class="container">
     <div class="section-head">
-      <span class="section-tag mono">Engineering Case Studies</span>
-      <h2 class="section-title">Selected Production Systems</h2>
-      <p class="section-desc">Detailed technical case studies highlighting problem-solving, architectural decisions, and production metrics.</p>
+      <span class="section-tag mono">Featured Experience</span>
+      <h2 class="section-title">Production Case Studies</h2>
+      <p class="section-desc">Key production mobile applications built across full-stack Flutter, SIP telecom, B2B security, and live streaming systems.</p>
     </div>
 
     <div class="case-study-grid">
       
-      <!-- Case Study 1: Efone (SIP / VoIP Telecom Platform) -->
-      <div class="case-study-card">
-        <div>
-          <div class="cs-header">
-            <span class="cs-tag mono">VoIP Telecom · Live Play Store</span>
-          </div>
-          <h3 class="cs-title">Efone — Real-Time SIP Calling & Chat</h3>
-
-          <div class="cs-section-label">Problem & Challenge</div>
-          <p class="cs-text">
-            Standard HTTP mobile apps fail to handle incoming voice calls when the app is killed or OS battery optimization suppresses background threads.
-          </p>
-
-          <div class="cs-section-label">Engineering Solution & Architecture</div>
-          <ul class="cs-bullets">
-            <li>Engineered an offline-first local data store using <strong>ObjectBox DB</strong> for instant zero-latency chat access.</li>
-            <li>Built native Android <code>ConnectionService</code> background listeners to intercept incoming SIP INVITE calls in killed states.</li>
-            <li>Developed centralized API interceptor layer managing OAuth 2.0 token auto-refresh and exponential retry policies.</li>
-          </ul>
-
-          <div class="cs-section-label">Impact & Result</div>
-          <p class="cs-text">
-            Achieved 99.8% incoming SIP call delivery rate across background states with zero local message loss.
-          </p>
-
-          <div class="tech-chips" style="margin-top: 16px;">
-            <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">SIP Protocol</span>
-            <span class="tech-chip">ObjectBox DB</span>
-            <span class="tech-chip">Android Native</span>
-          </div>
-
-          <a href="https://play.google.com/store/apps/details?id=efone.easytel" target="_blank" class="bento-link" style="margin-top: 14px;">
-            View on Google Play Store ↗
-          </a>
-        </div>
-
-        <div class="bento-media-frame">
-          <img src="assets/images/efone.webp" alt="Efone SIP Telecom Architecture" loading="lazy">
-        </div>
-      </div>
-
-      <!-- Case Study 2: CIRQL (GDPR Live Streaming Social App) -->
+      <!-- Project 1: CIRQL -->
       <div class="case-study-card">
         <div>
           <div class="cs-header">
@@ -1293,32 +1131,28 @@
           </div>
           <h3 class="cs-title">CIRQL — Geo-Social Live Streaming Network</h3>
 
-          <div class="cs-section-label">Problem & Challenge</div>
+          <div class="cs-section-label">Overview & Architecture</div>
           <p class="cs-text">
-            Delivering high-concurrency live streaming and location-based discovery while strictly adhering to European GDPR privacy standards and right-to-erasure laws.
+            A map-based live streaming social application built for a European client targeting UK university campuses — engineered under strict GDPR compliance from day one.
           </p>
 
-          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <div class="cs-section-label">Key Engineering Contributions</div>
           <ul class="cs-bullets">
-            <li>Designed strict Firestore and Cloud Storage security rules with automated TTL expiration policies.</li>
-            <li>Built serverless Node.js Cloud Functions for authentication, content moderation triggers, and fan-out notifications.</li>
-            <li>Integrated Zego Cloud live streaming SDK with custom FFmpeg video trimming isolating isolated threads.</li>
+            <li>Firestore & Storage security rules with TTL data policies and right-to-erasure workflows.</li>
+            <li>Cloud Functions backend for serverless signups, content moderation triggers, and follower fan-out.</li>
+            <li>Custom video trimmer with FFmpeg thumbnail rendering & Zego live cloud recording.</li>
           </ul>
-
-          <div class="cs-section-label">Impact & Result</div>
-          <p class="cs-text">
-            Successfully deployed to UK university campuses with 100% GDPR compliance audit validation.
-          </p>
 
           <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">Firebase Functions</span>
+            <span class="tech-chip">Firebase</span>
+            <span class="tech-chip">Cloud Functions</span>
             <span class="tech-chip">Zego Engine</span>
             <span class="tech-chip">FFmpeg</span>
           </div>
 
           <a href="https://play.google.com/store/apps/details?id=com.cirql.cirql.ios" target="_blank" class="bento-link" style="margin-top: 14px;">
-            View on Google Play Store ↗
+            View Live on Google Play Store ↗
           </a>
         </div>
 
@@ -1327,126 +1161,353 @@
         </div>
       </div>
 
-      <!-- Case Study 3: Guard 360 Manager (B2B Security GPS Dispatch) -->
+      <!-- Project 2: Efone (Octet Solutions) -->
       <div class="case-study-card">
         <div>
           <div class="cs-header">
-            <span class="cs-tag mono">B2B Enterprise · Real-Time GPS</span>
+            <span class="cs-tag mono">Senior Developer · Octet Solutions</span>
           </div>
-          <h3 class="cs-title">Guard 360 Manager — B2B GPS Patrol System</h3>
+          <h3 class="cs-title">Efone — SIP Real-Time Calling & Chat Platform</h3>
 
-          <div class="cs-section-label">Problem & Challenge</div>
+          <div class="cs-section-label">Overview & Architecture</div>
           <p class="cs-text">
-            Security agencies needed continuous, sub-10 meter GPS tracking for field guards on shift without causing excessive mobile battery drain.
+            Architected and maintained Efone, a full-stack SIP-based real-time calling and chat platform. Took full ownership of design decisions and delivered features across the complete software development lifecycle.
           </p>
 
-          <div class="cs-section-label">Engineering Solution & Architecture</div>
+          <div class="cs-section-label">Key Engineering Contributions</div>
           <ul class="cs-bullets">
-            <li>Implemented adaptive background GPS polling with velocity-based frequency throttling.</li>
-            <li>Built automated geofence boundary violation alerts and media-upload proof incident logging.</li>
-            <li>Full-stack architecture pairing Flutter frontends with Firebase Cloud Functions backend.</li>
+            <li>Implemented <strong>offline-first architecture using ObjectBox DB</strong> for local data storage, ensuring seamless functionality without active internet.</li>
+            <li>Designed and built <strong>background service system</strong> for reliable incoming SIP calls and messages in closed/background app states.</li>
+            <li>Built API interceptor layer with token refresh, retry logic, and centralized error handling, improving request reliability.</li>
+            <li>Refactored legacy codebase using SOLID principles and Clean Architecture, boosting maintainability and test coverage.</li>
           </ul>
 
-          <div class="cs-section-label">Impact & Result</div>
+          <div class="tech-chips" style="margin-top: 16px;">
+            <span class="tech-chip">Flutter</span>
+            <span class="tech-chip">SIP Protocol</span>
+            <span class="tech-chip">ObjectBox DB</span>
+            <span class="tech-chip">GetX</span>
+            <span class="tech-chip">Clean Arch</span>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=efone.easytel" target="_blank" class="bento-link" style="margin-top: 14px;">
+            View Live on Google Play Store ↗
+          </a>
+        </div>
+
+        <div class="bento-media-frame">
+          <img src="assets/images/efone.webp" alt="Efone SIP Calling UI" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Project 3: Guard 360 Manager (Cybermeteors) -->
+      <div class="case-study-card">
+        <div>
+          <div class="cs-header">
+            <span class="cs-tag mono">Cybermeteors · B2B Platform</span>
+          </div>
+          <h3 class="cs-title">Guard 360 Manager — B2B Security Platform</h3>
+
+          <div class="cs-section-label">Overview & Architecture</div>
           <p class="cs-text">
-            Reduced background location power consumption by 35% while maintaining strict patrol audit trails.
+            B2B security platform enabling real-time GPS tracking via Google Maps, geofencing alerts, incident reporting with media upload proof, and shift management. Built both Flutter frontend and Firebase Cloud Functions backend.
           </p>
+
+          <div class="cs-section-label">Key Engineering Contributions</div>
+          <ul class="cs-bullets">
+            <li>Real-time continuous GPS guard tracking and geofence boundary violation alerts.</li>
+            <li>Incident logging with media upload proof (photos/videos) and automated background notification dispatch.</li>
+            <li>Full-stack development connecting Flutter client apps to serverless Firebase Cloud Functions.</li>
+          </ul>
 
           <div class="tech-chips" style="margin-top: 16px;">
             <span class="tech-chip">Flutter</span>
             <span class="tech-chip">Google Maps SDK</span>
             <span class="tech-chip">Firebase Cloud Functions</span>
-            <span class="tech-chip">FCM</span>
+            <span class="tech-chip">FCM Push</span>
           </div>
 
           <a href="https://play.google.com/store/apps/details?id=com.cybermeteors.guard_360" target="_blank" class="bento-link" style="margin-top: 14px;">
-            View on Google Play Store ↗
+            View Live on Google Play Store ↗
           </a>
         </div>
 
         <div class="bento-media-frame">
-          <img src="assets/images/guard_360.webp" alt="Guard 360 Manager Interface" loading="lazy">
+          <img src="assets/images/guard_360.webp" alt="Guard 360 Manager UI" loading="lazy">
         </div>
       </div>
 
-      <!-- Case Study 4: FixPic AI (Photo Editor & Enhancer) -->
-      <div class="case-study-card">
-        <div>
-          <div class="cs-header">
-            <span class="cs-tag mono">AI & Image Processing · Live</span>
+    </div>
+
+    <!-- Additional Shipped Applications (Smooth Infinite Auto-Scroll Slider with Interactive Arrow Controls) -->
+    <div class="more-projects-head">
+      <span>Additional Shipped Applications</span>
+      <div class="slider-controls">
+        <button class="slider-arrow-btn" id="sliderPrevBtn" aria-label="Previous Project">‹</button>
+        <button class="slider-arrow-btn" id="sliderNextBtn" aria-label="Next Project">›</button>
+      </div>
+    </div>
+
+    <div class="marquee-wrapper" id="marqueeWrapper">
+      <div class="compact-projects-grid" id="compactProjectsGrid">
+        
+        <!-- Original Set -->
+        <!-- FixPic AI (TOP 1) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">FixPic — AI Photo Editor</h4>
+            <p class="cp-desc">
+              AI-powered photo editing & enhancement app featuring GPU-accelerated image restoration, background removal, and Dart Isolates for 60 FPS performance.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Flutter</span>
+              <span class="tech-chip">Dart Isolates</span>
+              <span class="tech-chip">OpenCV / ML</span>
+            </div>
           </div>
-          <h3 class="cs-title">FixPic — GPU Image Processing Pipeline</h3>
-
-          <div class="cs-section-label">Problem & Challenge</div>
-          <p class="cs-text">
-            Executing heavy AI photo restoration and background isolation models without dropping UI frames below 60 FPS.
-          </p>
-
-          <div class="cs-section-label">Engineering Solution & Architecture</div>
-          <ul class="cs-bullets">
-            <li>Offloaded heavy image bitmap manipulation to background Dart Isolates and native GPU shaders.</li>
-            <li>Integrated automated background removal and smart object eraser models into a responsive editor UI.</li>
-          </ul>
-
-          <div class="cs-section-label">Impact & Result</div>
-          <p class="cs-text">
-            Maintained steady 60 FPS rendering during 4K image manipulation with sub-400ms filter execution times.
-          </p>
-
-          <div class="tech-chips" style="margin-top: 16px;">
-            <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">Dart Isolates</span>
-            <span class="tech-chip">OpenCV / ML</span>
-            <span class="tech-chip">GPU Filters</span>
-          </div>
-
-          <a href="https://play.google.com/store/apps/details?id=com.fix_pic.fixpic" target="_blank" class="bento-link" style="margin-top: 14px;">
-            View on Google Play Store ↗
+          <a href="https://play.google.com/store/apps/details?id=com.fix_pic.fixpic" target="_blank" class="bento-link" style="margin-top: 12px;">
+            View on Play Store ↗
           </a>
         </div>
 
-        <div class="bento-media-frame">
-          <img src="assets/images/fixpic.webp" alt="FixPic AI Photo Editor Interface" loading="lazy">
+        <!-- AI Facial Recognition Attendance System (TOP 2) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">AI Facial Attendance System</h4>
+            <p class="cp-desc">
+              Automated workplace attendance verification kiosk built using Google ML Kit Face Detection API with real-time Firebase Firestore synchronization.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Google ML Kit</span>
+              <span class="tech-chip">Face Detection</span>
+              <span class="tech-chip">Firestore Sync</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank" class="bento-link" style="margin-top: 12px;">
+            View on Play Store ↗
+          </a>
+        </div>
+
+        <!-- Vardstod Medical App -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Vardstod Medical App</h4>
+            <p class="cp-desc">
+              Telehealth app featuring encrypted data storage, secure patient-provider messaging, appointment scheduling, and e-prescriptions.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">HIPAA Compliance</span>
+              <span class="tech-chip">Encrypted DB</span>
+              <span class="tech-chip">Firestore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bingo Play & Dremento -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Bingo Play & Dremento</h4>
+            <p class="cp-desc">
+              Zego Live Streaming SDK integration, RevenueCat subscription management, real-time chat with Pusher (text, image, video, audio).
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Zego SDK</span>
+              <span class="tech-chip">RevenueCat</span>
+              <span class="tech-chip">Pusher Chat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Steve Rams Junk Disposal -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Steve Rams Logistics</h4>
+            <p class="cp-desc">
+              Scheduling, Google Maps route optimization, real-time driver tracking, and Stripe payment gateway integration.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Google Maps</span>
+              <span class="tech-chip">Route Optimization</span>
+              <span class="tech-chip">Stripe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate Clone Set For Seamless Infinite Loop -->
+        <!-- FixPic AI (Clone) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">FixPic — AI Photo Editor</h4>
+            <p class="cp-desc">
+              AI-powered photo editing & enhancement app featuring GPU-accelerated image restoration, background removal, and Dart Isolates for 60 FPS performance.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Flutter</span>
+              <span class="tech-chip">Dart Isolates</span>
+              <span class="tech-chip">OpenCV / ML</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.fix_pic.fixpic" target="_blank" class="bento-link" style="margin-top: 12px;">
+            View on Play Store ↗
+          </a>
+        </div>
+
+        <!-- AI Facial Recognition Attendance System (Clone) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">AI Facial Attendance System</h4>
+            <p class="cp-desc">
+              Automated workplace attendance verification kiosk built using Google ML Kit Face Detection API with real-time Firebase Firestore synchronization.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Google ML Kit</span>
+              <span class="tech-chip">Face Detection</span>
+              <span class="tech-chip">Firestore Sync</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank" class="bento-link" style="margin-top: 12px;">
+            View on Play Store ↗
+          </a>
+        </div>
+
+        <!-- Vardstod Medical App (Clone) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Vardstod Medical App</h4>
+            <p class="cp-desc">
+              Telehealth app featuring encrypted data storage, secure patient-provider messaging, appointment scheduling, and e-prescriptions.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">HIPAA Compliance</span>
+              <span class="tech-chip">Encrypted DB</span>
+              <span class="tech-chip">Firestore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bingo Play & Dremento (Clone) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Bingo Play & Dremento</h4>
+            <p class="cp-desc">
+              Zego Live Streaming SDK integration, RevenueCat subscription management, real-time chat with Pusher (text, image, video, audio).
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Zego SDK</span>
+              <span class="tech-chip">RevenueCat</span>
+              <span class="tech-chip">Pusher Chat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Steve Rams Junk Disposal (Clone) -->
+        <div class="compact-project-card">
+          <div>
+            <h4 class="cp-title">Steve Rams Logistics</h4>
+            <p class="cp-desc">
+              Scheduling, Google Maps route optimization, real-time driver tracking, and Stripe payment gateway integration.
+            </p>
+            <div class="tech-chips">
+              <span class="tech-chip">Google Maps</span>
+              <span class="tech-chip">Route Optimization</span>
+              <span class="tech-chip">Stripe</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Technical Skills Matrix (Matched 100% to Resume Categories) -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag mono">Technical Competencies</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-desc">Core technical competencies across mobile development, backend cloud, and databases.</p>
+    </div>
+
+    <div class="skills-matrix-grid-4">
+      
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator"></span> Mobile Development</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Flutter</span>
+          <span class="skill-tag">Dart</span>
+          <span class="skill-tag">iOS</span>
+          <span class="skill-tag">Android</span>
+          <span class="skill-tag">Cross-Platform</span>
+          <span class="skill-tag">Material Design</span>
+          <span class="skill-tag">Cupertino</span>
+          <span class="skill-tag">Custom Widgets</span>
+          <span class="skill-tag">Platform Channels</span>
+          <span class="skill-tag">Responsive Design</span>
         </div>
       </div>
 
-      <!-- Case Study 5: AI Attendance (On-Device Vision System) -->
-      <div class="case-study-card">
-        <div>
-          <div class="cs-header">
-            <span class="cs-tag mono">On-Device Vision · Computer Vision</span>
-          </div>
-          <h3 class="cs-title">AI Facial Recognition Attendance</h3>
-
-          <div class="cs-section-label">Problem & Challenge</div>
-          <p class="cs-text">
-            Automating workplace attendance verification at entrance kiosks without server latency or privacy exposure.
-          </p>
-
-          <div class="cs-section-label">Engineering Solution & Architecture</div>
-          <ul class="cs-bullets">
-            <li>Implemented on-device face detection and vector matching using Google ML Kit.</li>
-            <li>Configured real-time instant synchronization to cloud Firestore admin dashboard.</li>
-          </ul>
-
-          <div class="cs-section-label">Impact & Result</div>
-          <p class="cs-text">
-            Achieved sub-500ms identity verification without sending raw face images over network.
-          </p>
-
-          <div class="tech-chips" style="margin-top: 16px;">
-            <span class="tech-chip">Flutter</span>
-            <span class="tech-chip">Google ML Kit</span>
-            <span class="tech-chip">Firestore</span>
-          </div>
-
-          <a href="https://play.google.com/store/apps/details?id=com.cenviro.sdasd" target="_blank" class="bento-link" style="margin-top: 14px;">
-            View on Google Play Store ↗
-          </a>
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#38BDF8;"></span> Full Stack & Cloud</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Firebase Auth</span>
+          <span class="skill-tag">Firestore</span>
+          <span class="skill-tag">Cloud Functions</span>
+          <span class="skill-tag">FCM</span>
+          <span class="skill-tag">Crashlytics</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span>
+          <span class="skill-tag">RESTful APIs</span>
+          <span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">WebSockets</span>
+          <span class="skill-tag">Real-time Architecture</span>
         </div>
+      </div>
 
-        <div class="bento-media-frame">
-          <img src="assets/images/attendance_app.webp" alt="AI Attendance Interface" loading="lazy">
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#10B981;"></span> Architecture & State Management</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Clean Architecture</span>
+          <span class="skill-tag">MVVM</span>
+          <span class="skill-tag">Repository Pattern</span>
+          <span class="skill-tag">SOLID Principles</span>
+          <span class="skill-tag">Dependency Injection</span>
+          <span class="skill-tag">Modular Architecture</span>
+          <span class="skill-tag">Offline-First Design</span>
+          <span class="skill-tag">GetX</span>
+          <span class="skill-tag">Riverpod</span>
+          <span class="skill-tag">Bloc/Cubit</span>
+          <span class="skill-tag">Provider</span>
+          <span class="skill-tag">Redux</span>
+          <span class="skill-tag">Hydrated Bloc</span>
+        </div>
+      </div>
+
+      <div class="skill-group-card">
+        <h3 class="skill-group-title"><span class="indicator" style="background:#F59E0B;"></span> Databases, Payments & DevOps</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">ObjectBox</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">Hive</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Secure Storage</span>
+          <span class="skill-tag">Stripe</span>
+          <span class="skill-tag">Apple Pay</span>
+          <span class="skill-tag">Google Pay</span>
+          <span class="skill-tag">RevenueCat</span>
+          <span class="skill-tag">Google Maps</span>
+          <span class="skill-tag">Zego Live SDK</span>
+          <span class="skill-tag">AWS SDK</span>
+          <span class="skill-tag">Twilio</span>
+          <span class="skill-tag">Google ML Kit</span>
+          <span class="skill-tag">Pusher</span>
+          <span class="skill-tag">Unit Testing</span>
+          <span class="skill-tag">TDD</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Fastlane</span>
+          <span class="skill-tag">Codemagic</span>
+          <span class="skill-tag">Git/GitHub</span>
         </div>
       </div>
 
@@ -1454,172 +1515,107 @@
   </div>
 </section>
 
-<!-- Experience Timeline Section -->
+<!-- Professional Experience Section (Matched 100% to Resume PDF) -->
 <section id="experience">
   <div class="container">
     <div class="section-head">
-      <span class="section-tag mono">Engineering Timeline</span>
-      <h2 class="section-title">Production Experience</h2>
-      <p class="section-desc">Key engineering roles owning full-stack mobile lifecycle across startup environments.</p>
+      <span class="section-tag mono">Work Timeline</span>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-desc">Exact roles, companies, dates, and bullet points from official resume.</p>
     </div>
 
     <div class="exp-timeline">
       
+      <!-- Role 1: Octet Solutions -->
       <div class="exp-timeline-item">
         <div>
           <div class="exp-meta-company">Octet Solutions</div>
           <div class="exp-meta-period mono">Sep 2024 — Present</div>
-          <div class="exp-meta-loc">Lahore, PK</div>
+          <div class="exp-meta-loc">Lahore, Pakistan</div>
         </div>
 
         <div>
           <h3 class="exp-body-role">Senior Flutter Developer</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+            Architected and maintained <strong>Efone</strong>, a full-stack SIP-based real-time calling and chat platform. Took full ownership of design decisions and delivered features across the complete software development lifecycle.
+          </p>
           <ul class="exp-achievements">
-            <li>Architected <strong>Efone</strong> — SIP-based real-time VoIP calling & chat platform with ObjectBox offline-first storage.</li>
-            <li>Built native background service listeners to catch incoming SIP calls in killed/background app states.</li>
-            <li>Refactored legacy codebase using SOLID & Clean Architecture, increasing unit test coverage and lowering crash rates.</li>
+            <li>Implemented offline-first architecture using <strong>ObjectBox</strong> for local data storage, ensuring seamless functionality without active internet.</li>
+            <li>Designed and built background service system for reliable incoming SIP calls and messages in closed/background app states.</li>
+            <li>Built API interceptor layer with token refresh, retry logic, and centralized error handling, improving request reliability.</li>
+            <li>Refactored legacy codebase using SOLID principles and clean architecture, boosting maintainability and test coverage.</li>
+            <li>Led code reviews, established bug tracking workflows, and mentored junior developers on Flutter best practices.</li>
           </ul>
         </div>
       </div>
 
+      <!-- Role 2: Cybermeteors -->
       <div class="exp-timeline-item">
         <div>
           <div class="exp-meta-company">Cybermeteors</div>
           <div class="exp-meta-period mono">Sep 2022 — Aug 2024</div>
-          <div class="exp-meta-loc">Lahore, PK</div>
+          <div class="exp-meta-loc">Lahore, Pakistan</div>
         </div>
 
         <div>
           <h3 class="exp-body-role">Flutter Developer (Full Stack Focus)</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+            Designed and delivered 7 production mobile applications across security, healthcare, legal, and entertainment sectors with significant full-stack involvement.
+          </p>
           <ul class="exp-achievements">
-            <li>Delivered 7 production apps across security (Guard 360), healthcare (Vardstod HIPAA App), and live streaming.</li>
-            <li>Engineered real-time chat infrastructure using Pusher and WebSockets supporting audio/video and read receipts.</li>
-            <li>Integrated multi-gateway payment processing (Stripe, Apple Pay, Google Pay, RevenueCat) with webhooks.</li>
+            <li><strong>Guard 360 Manager (B2B Security Platform):</strong> Real-time GPS tracking via Google Maps, geofencing alerts, incident reporting with media upload, shift management. Built both Flutter frontend and Firebase Cloud Functions backend.</li>
+            <li><strong>Vardstod Medical App (HIPAA-Compliant):</strong> Encrypted data storage, secure patient-provider messaging, appointment scheduling, e-prescription management with Firestore security rules.</li>
+            <li><strong>Bingo Play & Dremento (Entertainment):</strong> Zego Live Streaming SDK integration, RevenueCat subscription management, real-time chat with Pusher.</li>
+            <li>Implemented real-time chat infrastructure (Pusher, WebSocket/Socket.IO) supporting text, image, video, audio with typing indicators and read receipts.</li>
+            <li>Integrated multiple payment gateways (Stripe, Apple Pay, Google Pay) with secure transaction processing and webhook handling.</li>
           </ul>
         </div>
       </div>
 
+      <!-- Role 3: Techquick -->
       <div class="exp-timeline-item">
         <div>
           <div class="exp-meta-company">Techquick</div>
           <div class="exp-meta-period mono">Feb 2022 — Aug 2022</div>
-          <div class="exp-meta-loc">Lahore, PK</div>
+          <div class="exp-meta-loc">Lahore, Pakistan</div>
         </div>
 
         <div>
           <h3 class="exp-body-role">Flutter Developer</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px;">
+            Developed and deployed 6 mobile applications across logistics, dating, parking, and attendance management sectors. Strong startup mentality with focus on rapid iteration and MVP delivery.
+          </p>
           <ul class="exp-achievements">
-            <li>Deployed 6 mobile apps across logistics (Steve Rams), parking (Utama), dating (Tibo), and attendance systems.</li>
-            <li>Engineered Google Maps route optimization and real-time driver tracking for construction-tech logistics.</li>
-            <li>Built AI facial recognition attendance system with Google ML Kit & Firestore sync.</li>
+            <li><strong>Steve Rams Junk Disposal (Construction-Tech Logistics):</strong> Scheduling, Google Maps route optimization, real-time driver tracking, Stripe payment integration.</li>
+            <li><strong>Utama Parking App (Real Estate Tech):</strong> Real-time parking availability, reservation system, QR code scanning, payment integration.</li>
+            <li><strong>Tibo Dating App:</strong> Profile matching, Twilio-powered messaging, location-based discovery, Firebase FCM push notifications.</li>
+            <li>Built AI-powered facial recognition attendance system using <strong>Google ML Kit Face Detection API</strong> with Firebase Firestore synchronization.</li>
+            <li>Leveraged AWS SDK for cloud storage and file management across logistics and parking applications.</li>
+            <li>Established reusable component library with custom widgets and shared packages for design consistency and accelerated development.</li>
           </ul>
         </div>
       </div>
 
     </div>
 
-    <!-- Education Card -->
+    <!-- Education Card (Exact Match to Resume) -->
     <div class="edu-card">
       <div>
         <div class="edu-title">Bachelor of Science in Computer Science (BSCS)</div>
         <div class="edu-sub">Virtual University of Pakistan, Lahore · Graduated Nov 2021</div>
       </div>
-      <span class="exp-meta-period mono" style="font-size: 13px;">Graduated 2021</span>
+      <span class="exp-meta-period mono" style="font-size: 13px;">Graduated Nov 2021</span>
     </div>
 
   </div>
 </section>
 
-<!-- Client & Peer Endorsements / Testimonials -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag mono">Engineering Impact</span>
-      <h2 class="section-title">Client & Team Endorsements</h2>
-      <p class="section-desc">Feedback from CTOs, Engineering Leads, and Founders who trusted me to lead production systems.</p>
-    </div>
-
-    <div class="testimonial-grid">
-      
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Ali took full architectural ownership of our SIP calling engine. His offline-first ObjectBox integration completely transformed our messaging reliability in low-connectivity areas."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">CTO</div>
-          <div>
-            <div class="author-name">Engineering Director</div>
-            <div class="author-role">Telecom Platform Client</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-quote">
-          "Delivering a HIPAA-compliant medical app under tight startup deadlines required someone who understands data encryption and security rules inside out. Ali delivered flawlessly."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">PM</div>
-          <div>
-            <div class="author-name">Lead Product Manager</div>
-            <div class="author-role">HealthTech Startup</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Technical FAQ Section -->
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag mono">Frequently Asked Questions</span>
-      <h2 class="section-title">Engineering Engagement FAQ</h2>
-      <p class="section-desc">Common questions from recruiters, hiring managers, and founders looking to hire.</p>
-    </div>
-
-    <div class="faq-grid">
-      
-      <div class="faq-card">
-        <h3 class="faq-question">What is your availability for Senior / Staff roles?</h3>
-        <p class="faq-answer">
-          I am immediately available for full-time Senior Flutter Engineer, Mobile Architect, or Technical Lead roles globally (Remote or On-site with relocation).
-        </p>
-      </div>
-
-      <div class="faq-card">
-        <h3 class="faq-question">Do you write custom native Swift and Kotlin code?</h3>
-        <p class="faq-answer">
-          Yes. While Flutter handles the cross-platform UI, I regularly write custom Swift and Kotlin MethodChannels for native background listeners, SIP CallKit/ConnectionService, and hardware API bindings.
-        </p>
-      </div>
-
-      <div class="faq-card">
-        <h3 class="faq-question">How do you approach offline-first mobile architecture?</h3>
-        <p class="faq-answer">
-          I treat local storage (ObjectBox/Hive) as the single source of truth for the UI layer, while background workers handle asynchronous delta sync with Node.js/Firebase backends upon network restoration.
-        </p>
-      </div>
-
-      <div class="faq-card">
-        <h3 class="faq-question">Can you lead and mentor junior developers?</h3>
-        <p class="faq-answer">
-          Yes. I routinely lead code reviews, establish bug tracking workflows, enforce SOLID/Clean Architecture guidelines, and mentor junior mobile engineers across sprint cycles.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Trust & Contact Section -->
+<!-- Contact Section -->
 <section id="contact" style="border-bottom: none;">
   <div class="container">
     <div class="contact-box">
       <h2>Let's build something <span class="text-accent-gradient">extraordinary.</span></h2>
-      <p>Available for Senior Flutter Engineer roles, Technical Lead positions, and Remote Contracts worldwide.</p>
+      <p>Available for Full Stack Flutter Developer roles and Remote Contracts across UAE/Gulf, Europe, and Global Remote.</p>
 
       <button class="copy-email-btn" id="copyEmailBtn">
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -1633,9 +1629,6 @@
         <a href="https://linkedin.com/in/syed-muhammad-ali-hussain-8b261a146" target="_blank" class="social-icon-pill" aria-label="LinkedIn Profile">
           <svg class="svg-icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="tel:+923431670848" class="social-icon-pill" aria-label="Phone Number">
-          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        </a>
       </div>
     </div>
   </div>
@@ -1647,11 +1640,12 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <p class="mono">© 2026 Syed Muhammad Ali Hussain — Senior Full Stack Flutter Engineer</p>
+    <p class="mono">© 2026 Syed Muhammad Ali Hussain — Full Stack Flutter Developer</p>
   </div>
 </footer>
 
 <script>
+  // Email Copy Handler
   const copyBtn = document.getElementById('copyEmailBtn');
   const emailVal = document.getElementById('emailVal');
   const toast = document.getElementById('toast');
@@ -1662,6 +1656,50 @@
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 3000);
       });
+    });
+  }
+
+  // Interactive Slider Controls (Skill-guided accessibility & manual navigation)
+  const grid = document.getElementById('compactProjectsGrid');
+  const prevBtn = document.getElementById('sliderPrevBtn');
+  const nextBtn = document.getElementById('sliderNextBtn');
+  const wrapper = document.getElementById('marqueeWrapper');
+
+  if (grid && prevBtn && nextBtn && wrapper) {
+    let scrollAmount = 0;
+    const cardStep = 350; // Card width + gap
+
+    prevBtn.addEventListener('click', () => {
+      grid.style.animationPlayState = 'paused';
+      scrollAmount = Math.min(scrollAmount + cardStep, 0);
+      grid.style.transform = `translateX(${scrollAmount}px)`;
+    });
+
+    nextBtn.addEventListener('click', () => {
+      grid.style.animationPlayState = 'paused';
+      scrollAmount = Math.max(scrollAmount - cardStep, -(grid.scrollWidth / 2));
+      grid.style.transform = `translateX(${scrollAmount}px)`;
+    });
+
+    // Touch & Drag Support for Mobile & Desktop
+    let isDown = false;
+    let startX;
+
+    wrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - scrollAmount;
+      grid.style.animationPlayState = 'paused';
+    });
+
+    wrapper.addEventListener('mouseleave', () => { isDown = false; });
+    wrapper.addEventListener('mouseup', () => { isDown = false; });
+
+    wrapper.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX;
+      scrollAmount = x - startX;
+      grid.style.transform = `translateX(${scrollAmount}px)`;
     });
   }
 </script>
